@@ -2,7 +2,7 @@ DROP DATABASE IF EXISTS opentable_reviews;
 
 CREATE DATABASE opentable_reviews;
 
-\CONNECT opentable_reviews;
+USE opentable_reviews;
 
 CREATE TABLE reviews_detail (
   id INT PRIMARY KEY,
