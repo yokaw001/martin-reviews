@@ -1,12 +1,20 @@
 /* eslint-disable no-console */
-const Sequelize = require('sequelize');
-const { database, username, password, host, dialect } = require('./config.js');
+const mysql = require('promise-mysql');
+const { database, user, password, host } = require('./config.js');
 
-const connection = new Sequelize(database, username, password, { host, dialect });
+const db = mysql.createConnection({
+  host,
+  user,
+  password,
+  database
+});
 
-connection
-  .authenticate()
-  .then(() => { console.log('Successfully connected to mysql'); })
-  .catch((err) => { console.error(err); });
+db.connect((err) => {
+  if (err) {
+    console.error(err);
+  } else {
+    console.log('Connected to mysql');
+  }
+});
 
-module.exports = connection;
+module.exports = db;

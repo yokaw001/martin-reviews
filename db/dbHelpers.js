@@ -1,8 +1,10 @@
-const Review = require('./models/Review.js');
+const db = require('./index.js');
 
 module.exports = {
   getAllReviews: () => {
-    return Review.findAll();
+    return db.query(`
+       
+    `);
   },
   addReview: () => {
 

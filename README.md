@@ -1,2 +1,2 @@
 # martin-restaurant-details
-Restaurant details component for OpenTable webpage
+Restaurant reviews component for OpenTable webpage
