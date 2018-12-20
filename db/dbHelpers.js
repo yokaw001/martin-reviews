@@ -1,6 +1,10 @@
-const Review = require('./models/review.js');
-const ReviewAgg = require('./models/reviewAgg.js');
+const Review = require('./models/Review.js');
 
 module.exports = {
+  getAllReviews: () => {
+    return Review.findAll();
+  },
+  addReview: () => {
 
+  },
 };
