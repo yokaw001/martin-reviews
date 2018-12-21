@@ -1,7 +1,7 @@
 import React, { Component } from 'react';
+import Axios from 'axios';
 import ReviewsSummary from './ReviewsSummary.jsx';
 import ReviewsList from './ReviewsList.jsx';
-import Axios from 'axios';
 
 class App extends Component {
   constructor(props) {
@@ -29,6 +29,7 @@ class App extends Component {
   getReviewsSummary = () => {
     return Axios.get(`api/reviews/summary/${this.state.restaurantId}`)
       .then(({data}) => {
+        console.log(data);
         this.setState({ reviewsSummary: data });
       });
   };

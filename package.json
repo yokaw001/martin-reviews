@@ -7,7 +7,7 @@
     "build": "webpack -w",
     "start": "nodemon server/index.js",
     "seed": "mysql -u root < schema.sql",
-    "test": "node tests/test.js"
+    "test": "jest"
   },
   "repository": {
     "type": "git",
@@ -42,6 +42,7 @@
     "eslint-plugin-import": "^2.14.0",
     "eslint-plugin-jsx-a11y": "^6.1.2",
     "eslint-plugin-react": "^7.11.1",
+    "jest": "^23.6.0",
     "nodemon": "^1.18.9",
     "supertest": "^3.3.0",
     "webpack": "^4.28.0",

@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const mysql = require('mysql-promise');
 const config = require('./config.js');
 
