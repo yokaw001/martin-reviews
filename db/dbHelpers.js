@@ -10,7 +10,7 @@ module.exports = {
 
       );
   `),
-  getAggReviews: restaurantId => db.query(`
-    SELECT* FROM reviews_agg where restaurant_id = ${restaurantId};
+  getReviewsSummary: restaurantId => db.query(`
+    SELECT* FROM reviews_summary where restaurant_id = ${restaurantId};
   `),
 };

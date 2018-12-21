@@ -1,8 +1,11 @@
-import React, { Component } from 'react';
+import React from 'react';
+import Review from './Review.jsx';
 
 const ReviewsList = (props) => (
   <div>
-    Reviews List
+    {props.reviews.map((review, i) => (
+      <Review review={review} key={i}/>
+    ))}
   </div>
 );
 

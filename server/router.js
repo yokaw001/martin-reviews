@@ -6,8 +6,8 @@ router
   .get(controller.all.get);
 
 router
-  .route('/reviews/agg/:restaurantId')
-  .get(controller.agg.get);
+  .route('/reviews/summary/:restaurantId')
+  .get(controller.summary.get);
 
 router
   .route('/reviews/filters/:restaurantId');

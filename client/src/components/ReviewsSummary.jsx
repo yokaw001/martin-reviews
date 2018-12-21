@@ -1,8 +1,8 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const ReviewsSummary = (props) => (
   <div>
-    Reviews Summary
+    {props.reviewsSummary.total_reviews}
   </div>
 );
 

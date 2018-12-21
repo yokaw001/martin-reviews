@@ -431,8 +431,8 @@ INSERT INTO reviews_detail (restaurant_id, user_id, overall_score, food_score, s
 INSERT INTO reviews_detail (restaurant_id, user_id, overall_score, food_score, service_score, ambience_score, would_recommend, dined_on_date, review_text) VALUES (7, 14, 2, 4, 2, 4, 1, "2018-02-10", "Morbi a ipsum.");
 INSERT INTO reviews_detail (restaurant_id, user_id, overall_score, food_score, service_score, ambience_score, would_recommend, dined_on_date, review_text) VALUES (10, 14, 1, 3, 1, 1, 0, "2016-12-21", "Maecenas tincidunt lacus at velit.");
 
-/* ================================== reviews_agg ================================== */
-CREATE VIEW reviews_agg AS 
+/* ================================== reviews_summary ================================== */
+CREATE VIEW reviews_summary AS 
 SELECT
   restaurant_id,
   COUNT(*) total_reviews,
