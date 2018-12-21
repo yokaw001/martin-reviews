@@ -1,6 +1,6 @@
 module.exports = {
-  database: 'opentable_reviews',
+  host: 'localhost',
   user: 'root',
   password: '',
-  host: 'localhost',
+  database: 'tableit_reviews',
 };

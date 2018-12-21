@@ -2,14 +2,14 @@ const router = require('express').Router();
 const controller = require('./controller.js');
 
 router
-  .route('reviews/:restaurantid')
-  .get(controller.reviews.get);
+  .route('/reviews/all/:restaurantId')
+  .get(controller.all.get);
 
 router
-  .route('reviews/:restaurantid/:reviewfilters')
+  .route('/reviews/agg/:restaurantId')
+  .get(controller.agg.get);
 
 router
-  .route('reviews/:restaurantid/:reviewsummary')
-
+  .route('/reviews/filters/:restaurantId');
 
 module.exports = router;

@@ -2,22 +2,26 @@
 const dbHelpers = require('../db/dbHelpers.js');
 
 module.exports = {
-  reviews: {
+  all: {
     get: (req, res) => {
-      dbHelpers.getAllReviews()
-        .then((data) => { res.status(200).send(data); })
+      const { restaurantId } = req.params;
+      dbHelpers.getAllReviews(restaurantId)
+        .then((data) => { res.status(200).send(data[0]); })
         .catch((err) => { console.error(err); });
     },
     post: (req, res) => {
-      dbHelpers.addReview()
+      const { newReview } = req.body;
+      dbHelpers.addReview(newReview)
         .then(() => { res.status(200).send(); })
         .catch((err) => { console.error(err); });
     },
-    put: (req, res) => {
-      res.status(200).send();
-    },
-    delete: (req, res) => {
-      res.status(200).send();
+  },
+  agg: {
+    get: (req, res) => {
+      const { restaurantId } = req.params;
+      dbHelpers.getAggReviews(restaurantId)
+        .then((data) => { res.status(200).send(data[0]); })
+        .catch((err) => { console.error(err); });
     },
   },
 };
