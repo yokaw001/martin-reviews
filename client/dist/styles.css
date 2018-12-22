@@ -1,15 +1,55 @@
+#app {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
 
+#reviewstoolbar {
+  display: flex;
+  flex-direction: column;
+  width: 650px;
+  font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  margin: 20px 0px 20px 0px;
+  /* border-style: solid;
+  border-color: black;
+  border-width: 1px; */
+}
 
+#sortby {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+}
+
+#sortbyselect {
+  width: 350px;
+  margin: 15px 0px 15px 0px;
+  font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  font-size: 16px;
+  background-color: white;
+}
+
+#reviewslist {
+  display: flex;
+  flex-direction: column;
+  justify-self: center;
+}
 
 .review {
   display: flex;
   justify-content: stretch;
   align-items: stretch;
-  width: 700px;
-  height: 215px;
+  width: 650px;
+  height: 200px;
   border-bottom: solid 1px #d8d9db;
   font-size: 13px;
   font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+  /* border-style: solid;
+  border-color: black;
+  border-width: 1px; */
 }
 
 .reviewuser {
@@ -17,7 +57,12 @@
   flex-direction: column;
   align-items: center;
   width: 18%;
-  line-height: 2.0;
+  line-height: 1.7;
+  font-weight: 500;
+  margin: 5px;
+  /* border-style: solid;
+  border-color: black;
+  border-width: 1px; */
 }
 
 .userinitials {
@@ -35,16 +80,16 @@
 }
 
 .username {
-  font-weight: bold;
   color: #2d333f;
 }
 
 .usercity {
-  color: #2d333f;
+  color: rgb(111, 115, 123);
 }
 
 .userreviewcount {
   font-size: 11px;
+  color: rgb(111, 115, 123);
 }
 
 .reviewbody {
@@ -53,6 +98,9 @@
   flex-grow: 1;
   align-items: stretch;
   width: 500px;
+  /* border-style: solid;
+  border-color: black;
+  border-width: 1px; */
 }
 
 .reviewratings {
@@ -61,27 +109,84 @@
   justify-content: space-between;
 }
 
-.reviewstars {
+.reviewheader {
   display: flex;
-  flex-direction: column;
-  justify-content: space-between;
-  color: red;
+  align-items: center;
+  font-size: 15px;
+  margin: 8px 5px 5px 5px;
+  /* border-style: solid;
+  border-color: black;
+  border-width: 1px; */
+}
+
+.stars {
+  width: 23%;
+  /* border-style: solid;
+  border-color: black;
+  border-width: 1px; */
+}
+
+.redstars {
   font-size: 20px;
-  padding: 5px;
+  color: rgb(220,20,60);
+}
+
+.greystars {
+  font-size: 20px;
+  color: lightgray;
+}
+
+.dinedondate {
+  color: #2d333f;
+  font-size: 13px;
+  font-weight: 500;
+  /* border-style: solid;
+  border-color: black;
+  border-width: 1px; */
 }
 
 .reviewscores {
   display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: center;
   height: 30px;
-  font-weight: bold;
-  padding: 5px;
+  margin: 0px 5px 5px 5px;
+  font-size: 12.5px;
+  font-weight: 600;
+  /* border-style: solid;
+  border-color: black;
+  border-width: 1px; */
+}
+
+.score {
+  margin: 0px 4px 0px 4px;
 }
 
 .reviewtext {
   flex-grow: 1;
   font-size: 15px;
-  padding: 5px;
+  margin: 5px;
+  color: #2d333f;
+  /* border-style: solid;
+  border-color: black;
+  border-width: 1px; */
+}
+
+.reviewfooter {
+  display: flex;
+  justify-content: space-between;
+  font-size: 15px;
+  margin: 10px 5px 10px 5px;
+  color: rgb(220,20,60);
+  /* border-style: solid;
+  border-color: black;
+  border-width: 1px; */
+}
+
+.reviewbtns {
+  display: flex;
+}
+
+.reportbtn, .helpfulbtn {
+  margin: 0px 8px 0px 8px;
   color: #2d333f;
 }

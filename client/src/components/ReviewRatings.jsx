@@ -1,16 +1,23 @@
 import React from 'react';
-import ReviewScores from './ReviewScores.jsx';
-import ReviewStars from './ReviewStars.jsx';
+import Moment from 'moment';
 
 const ReviewRatings = (props) => (
   <div className="reviewratings">
-    <ReviewStars starCounts={props.review.overallScore}/>
-    <ReviewScores 
-      overallScore={props.review.overall_score}
-      foodScore={props.review.food_score}
-      serviceScore={props.review.service_score}
-      ambienceScore={props.review.ambience_score}
-    />
+    <div className="reviewheader">
+      <div className="stars">
+        <span className="redstars">{`${("★ ").repeat(props.review.overall_score)}`}</span>
+        <span className="greystars">{`${("★ ").repeat(5 - props.review.overall_score)}`}</span>
+      </div>
+      <div className="dinedondate">
+        <span>{`Dined on ${Moment(props.review.dined_on_date).format('MMMM Do, YYYY')}`}</span>
+      </div>
+    </div>
+    <div className="reviewscores">
+      <span className="score">{`Overall  ${props.review.overall_score} • `}</span>
+      <span className="score">{`Food  ${props.review.food_score} • `}</span>
+      <span className="score">{`Service  ${props.review.service_score} • `}</span>
+      <span className="score">{`Ambience  ${props.review.ambience_score}`}</span>
+    </div>
   </div>
 );
 

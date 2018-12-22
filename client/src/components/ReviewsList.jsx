@@ -3,11 +3,9 @@ import Review from './Review.jsx';
 
 const ReviewsList = (props) => (
   <div id="reviewslist">
-    <ul>
-      {props.reviews.map((review, i) => (
-        <Review review={review} key={i}/>
-      ))}
-    </ul>
+    {props.reviews.map((review, i) => (
+      <Review review={review} key={i}/>
+    ))}
   </div>
 );
 

@@ -2,7 +2,7 @@ import React from 'react';
 
 const ReviewsSummary = (props) => (
   <div>
-    {props.reviewsSummary.total_reviews}
+    {/* {props.reviewsSummary.total_reviews} */}
   </div>
 );
 

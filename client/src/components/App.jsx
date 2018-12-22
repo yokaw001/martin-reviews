@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import ReviewsSummary from './ReviewsSummary.jsx';
+import ReviewsToolbar from './ReviewsToolbar.jsx';
 import ReviewsList from './ReviewsList.jsx';
 
 class App extends Component {
@@ -34,14 +35,13 @@ class App extends Component {
       });
   };
 
-  render() {
-    return (<div>
-      App
+  render = () => (
+    <div id="app">
       <ReviewsSummary reviewsSummary={this.state.reviewsSummary}/>
+      <ReviewsToolbar />
       <ReviewsList reviews={this.state.reviews}/>
     </div>
-    );
-  }
+  );
 }
 
 export default App;
