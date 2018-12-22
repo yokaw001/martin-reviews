@@ -26,35 +26,36 @@ INSERT INTO restaurants (restaurant_name) VALUES ("Buffalo Wild Wings");
 CREATE TABLE users (
   id INT AUTO_INCREMENT,
   username VARCHAR(255),
+  user_initials VARCHAR(2),
   user_city VARCHAR(255),
   PRIMARY KEY(id)
 );
 
-INSERT INTO users (username, user_city) VALUES ("gcobello0", "Santa Barbara");
-INSERT INTO users (username, user_city) VALUES ("lbabington1", "Santa Barbara");
-INSERT INTO users (username, user_city) VALUES ("mtimms2", "Houston");
-INSERT INTO users (username, user_city) VALUES ("kmacrow3", "Houston");
-INSERT INTO users (username, user_city) VALUES ("hleyborne4", "Austin");
-INSERT INTO users (username, user_city) VALUES ("dmolfino5", "Austin");
-INSERT INTO users (username, user_city) VALUES ("mchung6", "New Orleans");
-INSERT INTO users (username, user_city) VALUES ("lchecci7", "New York");
-INSERT INTO users (username, user_city) VALUES ("hcollishaw8", "New York");
-INSERT INTO users (username, user_city) VALUES ("carlow9", "Chicago");
-INSERT INTO users (username, user_city) VALUES ("vturmalla", "Chicago");
-INSERT INTO users (username, user_city) VALUES ("vcotab",	"Chicago");
-INSERT INTO users (username, user_city) VALUES ("mknottleyc",	"Los Angeles");
-INSERT INTO users (username, user_city) VALUES ("rmacphaild",	"Los Angeles");
-INSERT INTO users (username, user_city) VALUES ("khanname",	"Los Angeles");
-INSERT INTO users (username, user_city) VALUES ("kdescoffierf",	"Los Angeles");
-INSERT INTO users (username, user_city) VALUES ("msneesbyg",	"San Francisco");
-INSERT INTO users (username, user_city) VALUES ("opeasegodh",	"San Francisco");
-INSERT INTO users (username, user_city) VALUES ("kpinchingi", "San Francisco");
-INSERT INTO users (username, user_city) VALUES ("wbartosikj", "San Francisco");
-INSERT INTO users (username, user_city) VALUES ("lpeizerk", "San Francisco");
-INSERT INTO users (username, user_city) VALUES ("hmurrelll",	"New York");
-INSERT INTO users (username, user_city) VALUES ("abeinckenm", "San Diego");
-INSERT INTO users (username, user_city) VALUES ("jfoxonn",	"San Diego");
-INSERT INTO users (username, user_city) VALUES ("tsalliero",	"San Diego");
+INSERT INTO users (username, user_initials, user_city) VALUES ("gcobello0", "MH", "Santa Barbara");
+INSERT INTO users (username, user_initials, user_city) VALUES ("lbabington1", "AB", "Santa Barbara");
+INSERT INTO users (username, user_initials, user_city) VALUES ("mtimms2", "DS", "Houston");
+INSERT INTO users (username, user_initials, user_city) VALUES ("kmacrow3", "DK", "Houston");
+INSERT INTO users (username, user_initials, user_city) VALUES ("hleyborne4", "SM", "Austin");
+INSERT INTO users (username, user_initials, user_city) VALUES ("dmolfino5", "JO", "Austin");
+INSERT INTO users (username, user_initials, user_city) VALUES ("mchung6", "JM", "New Orleans");
+INSERT INTO users (username, user_initials, user_city) VALUES ("lchecci7", "TM", "New York");
+INSERT INTO users (username, user_initials, user_city) VALUES ("hcollishaw8", "IL", "New York");
+INSERT INTO users (username, user_initials, user_city) VALUES ("carlow9", "DB", "Chicago");
+INSERT INTO users (username, user_initials, user_city) VALUES ("vturmalla", "SN", "Chicago");
+INSERT INTO users (username, user_initials, user_city) VALUES ("vcotab", "SG", "Chicago");
+INSERT INTO users (username, user_initials, user_city) VALUES ("mknottleyc", "JK", "Los Angeles");
+INSERT INTO users (username, user_initials, user_city) VALUES ("rmacphaild", "KC", "Los Angeles");
+INSERT INTO users (username, user_initials, user_city) VALUES ("khanname", "YC", "Los Angeles");
+INSERT INTO users (username, user_initials, user_city) VALUES ("kdescoffierf", "AC", "Los Angeles");
+INSERT INTO users (username, user_initials, user_city) VALUES ("msneesbyg",	"PS", "San Francisco");
+INSERT INTO users (username, user_initials, user_city) VALUES ("opeasegodh", "MM", "San Francisco");
+INSERT INTO users (username, user_initials, user_city) VALUES ("kpinchingi", "HH", "San Francisco");
+INSERT INTO users (username, user_initials, user_city) VALUES ("wbartosikj", "JH", "San Francisco");
+INSERT INTO users (username, user_initials, user_city) VALUES ("lpeizerk", "AH", "San Francisco");
+INSERT INTO users (username, user_initials, user_city) VALUES ("hmurrelll",	"MB", "New York");
+INSERT INTO users (username, user_initials, user_city) VALUES ("abeinckenm", "LP", "San Diego");
+INSERT INTO users (username, user_initials, user_city) VALUES ("jfoxonn",	"KS", "San Diego");
+INSERT INTO users (username, user_initials, user_city) VALUES ("tsalliero",	"DM", "San Diego");
 
 /* ================================== review_filters ================================== */
 CREATE TABLE review_filters (

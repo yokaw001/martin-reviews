@@ -106,7 +106,67 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ReviewUser_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReviewUser.jsx */ \"./client/src/components/ReviewUser.jsx\");\n\n\n\nvar Review = function Review(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, props.review.review_text);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Review);\n\n//# sourceURL=webpack:///./client/src/components/Review.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ReviewUser_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReviewUser.jsx */ \"./client/src/components/ReviewUser.jsx\");\n/* harmony import */ var _ReviewBody_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ReviewBody.jsx */ \"./client/src/components/ReviewBody.jsx\");\n\n\n\n\nvar Review = function Review(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"review\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ReviewUser_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    username: props.review.username,\n    userInitials: props.review.user_initials,\n    userCity: props.review.user_city,\n    reviewCount: props.review.user_total_reviews\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ReviewBody_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    review: props.review\n  }));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (Review);\n\n//# sourceURL=webpack:///./client/src/components/Review.jsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/ReviewBody.jsx":
+/*!**********************************************!*\
+  !*** ./client/src/components/ReviewBody.jsx ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ReviewRatings_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReviewRatings.jsx */ \"./client/src/components/ReviewRatings.jsx\");\n/* harmony import */ var _ReviewText_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ReviewText.jsx */ \"./client/src/components/ReviewText.jsx\");\n\n\n\n\nvar ReviewBody = function ReviewBody(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"reviewbody\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ReviewRatings_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    review: props.review\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ReviewText_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    reviewText: props.review.review_text\n  }));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ReviewBody);\n\n//# sourceURL=webpack:///./client/src/components/ReviewBody.jsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/ReviewRatings.jsx":
+/*!*************************************************!*\
+  !*** ./client/src/components/ReviewRatings.jsx ***!
+  \*************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ReviewScores_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReviewScores.jsx */ \"./client/src/components/ReviewScores.jsx\");\n/* harmony import */ var _ReviewStars_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ReviewStars.jsx */ \"./client/src/components/ReviewStars.jsx\");\n\n\n\n\nvar ReviewRatings = function ReviewRatings(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"reviewratings\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ReviewStars_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    starCounts: props.review.overallScore\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ReviewScores_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    overallScore: props.review.overall_score,\n    foodScore: props.review.food_score,\n    serviceScore: props.review.service_score,\n    ambienceScore: props.review.ambience_score\n  }));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ReviewRatings);\n\n//# sourceURL=webpack:///./client/src/components/ReviewRatings.jsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/ReviewScores.jsx":
+/*!************************************************!*\
+  !*** ./client/src/components/ReviewScores.jsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar ReviewScores = function ReviewScores(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"reviewscores\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"span\", null, \"Overall  \".concat(props.overallScore, \" \\u2022 \")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"span\", null, \"Food  \".concat(props.overallScore, \" \\u2022 \")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"span\", null, \"Service  \".concat(props.overallScore, \" \\u2022 \")), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"span\", null, \"Ambience  \".concat(props.overallScore))));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ReviewScores);\n\n//# sourceURL=webpack:///./client/src/components/ReviewScores.jsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/ReviewStars.jsx":
+/*!***********************************************!*\
+  !*** ./client/src/components/ReviewStars.jsx ***!
+  \***********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar ReviewStars = function ReviewStars(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"reviewstars\"\n  }, \"★ ★ ★ ★ ★\");\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ReviewStars);\n\n//# sourceURL=webpack:///./client/src/components/ReviewStars.jsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/ReviewText.jsx":
+/*!**********************************************!*\
+  !*** ./client/src/components/ReviewText.jsx ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar ReviewText = function ReviewText(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"reviewtext\"\n  }, props.reviewText);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ReviewText);\n\n//# sourceURL=webpack:///./client/src/components/ReviewText.jsx?");
 
 /***/ }),
 
@@ -118,7 +178,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar ReviewUser = function ReviewUser(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, props.username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, props.city), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, props.reviewCount + ' reviews'));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ReviewUser);\n\n//# sourceURL=webpack:///./client/src/components/ReviewUser.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar ReviewUser = function ReviewUser(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"reviewuser\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"userinitials\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"span\", null, props.userInitials)), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"username\"\n  }, props.username), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"usercity\"\n  }, props.userCity), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"userreviewcount\"\n  }, props.reviewCount + ' reviews'));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ReviewUser);\n\n//# sourceURL=webpack:///./client/src/components/ReviewUser.jsx?");
 
 /***/ }),
 
@@ -130,7 +190,7 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Review_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Review.jsx */ \"./client/src/components/Review.jsx\");\n\n\n\nvar ReviewsList = function ReviewsList(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", null, props.reviews.map(function (review, i) {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Review_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n      review: review,\n      key: i\n    });\n  }));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ReviewsList);\n\n//# sourceURL=webpack:///./client/src/components/ReviewsList.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _Review_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./Review.jsx */ \"./client/src/components/Review.jsx\");\n\n\n\nvar ReviewsList = function ReviewsList(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"reviewslist\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"ul\", null, props.reviews.map(function (review, i) {\n    return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_Review_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n      review: review,\n      key: i\n    });\n  })));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ReviewsList);\n\n//# sourceURL=webpack:///./client/src/components/ReviewsList.jsx?");
 
 /***/ }),
 

@@ -1,0 +1,87 @@
+
+
+
+.review {
+  display: flex;
+  justify-content: stretch;
+  align-items: stretch;
+  width: 700px;
+  height: 215px;
+  border-bottom: solid 1px #d8d9db;
+  font-size: 13px;
+  font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
+}
+
+.reviewuser {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 18%;
+  line-height: 2.0;
+}
+
+.userinitials {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 18px;
+  height: 25px;
+  width: 25px;
+  color: white;
+  background-color: gray;
+  padding: 10px;
+  margin: 10px;
+  border-radius: 50%
+}
+
+.username {
+  font-weight: bold;
+  color: #2d333f;
+}
+
+.usercity {
+  color: #2d333f;
+}
+
+.userreviewcount {
+  font-size: 11px;
+}
+
+.reviewbody {
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  align-items: stretch;
+  width: 500px;
+}
+
+.reviewratings {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.reviewstars {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  color: red;
+  font-size: 20px;
+  padding: 5px;
+}
+
+.reviewscores {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 30px;
+  font-weight: bold;
+  padding: 5px;
+}
+
+.reviewtext {
+  flex-grow: 1;
+  font-size: 15px;
+  padding: 5px;
+  color: #2d333f;
+}
