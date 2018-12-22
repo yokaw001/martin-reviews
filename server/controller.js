@@ -20,7 +20,24 @@ module.exports = {
     get: (req, res) => {
       const { restaurantId } = req.params;
       dbHelpers.getReviewsSummary(restaurantId)
-        .spread((data) => { res.status(200).send(data[0]); })
+        .spread((data) => {
+          const reviewsSummary = {
+            ...data[0],
+            reviewsFilters: [
+              data[0].review_filter_1,
+              data[0].review_filter_2,
+              data[0].review_filter_3,
+              data[0].review_filter_4,
+              data[0].review_filter_5,
+            ],
+          };
+          delete reviewsSummary.review_filter_1;
+          delete reviewsSummary.review_filter_2;
+          delete reviewsSummary.review_filter_3;
+          delete reviewsSummary.review_filter_4;
+          delete reviewsSummary.review_filter_5;
+          res.status(200).send(reviewsSummary);
+        })
         .catch((err) => { console.error(err); });
     },
   },

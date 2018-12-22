@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ReviewButtons = () => (
+const ReviewFooter = () => (
   <div className="reviewfooter">
     <div className="readmore">+ Read More</div>
     <div className="reviewbtns">
@@ -10,4 +10,4 @@ const ReviewButtons = () => (
   </div>
 );
 
-export default ReviewButtons;
+export default ReviewFooter;

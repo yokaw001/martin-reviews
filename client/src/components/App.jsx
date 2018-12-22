@@ -10,11 +10,13 @@ class App extends Component {
     this.state = {
       restaurantId: 1,
       reviews: [],
-      reviewsSummary: {},
+      reviewsSummary: {reviewsFilters:[]},
+      currentSortBy: 'Newest',
+      currentFilters: [],
     };
   }
 
-  componentDidMount() {
+  componentWillMount() {
     this.getAllReviews()
       .then(this.getReviewsSummary);
   }
@@ -38,7 +40,11 @@ class App extends Component {
   render = () => (
     <div id="app">
       <ReviewsSummary reviewsSummary={this.state.reviewsSummary}/>
-      <ReviewsToolbar />
+      <ReviewsToolbar
+        reviewsSummary={this.state.reviewsSummary}
+        currentSortBy={this.state.currentSortBy}
+        currentFilters={this.state.currentFilters}
+      />
       <ReviewsList reviews={this.state.reviews}/>
     </div>
   );
