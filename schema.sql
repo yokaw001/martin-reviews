@@ -22,6 +22,7 @@ INSERT INTO restaurants (restaurant_name) VALUES ("Daikokuya");
 INSERT INTO restaurants (restaurant_name) VALUES ("Red Wheelbarrow");
 INSERT INTO restaurants (restaurant_name) VALUES ("Buffalo Wild Wings");
 
+
 /* ================================== users  ================================== */
 CREATE TABLE users (
   id INT AUTO_INCREMENT,
@@ -56,6 +57,7 @@ INSERT INTO users (username, user_initials, user_city) VALUES ("hmurrelll",	"MB"
 INSERT INTO users (username, user_initials, user_city) VALUES ("abeinckenm", "LP", "San Diego");
 INSERT INTO users (username, user_initials, user_city) VALUES ("jfoxonn",	"KS", "San Diego");
 INSERT INTO users (username, user_initials, user_city) VALUES ("tsalliero",	"DM", "San Diego");
+
 
 /* ================================== review_filters ================================== */
 CREATE TABLE review_filters (
@@ -115,6 +117,7 @@ INSERT INTO review_filters (restaurant_id, review_filter) VALUES (10, 'Burritos'
 INSERT INTO review_filters (restaurant_id, review_filter) VALUES (10, 'Pizza');
 INSERT INTO review_filters (restaurant_id, review_filter) VALUES (10, 'Breakfast');
 INSERT INTO review_filters (restaurant_id, review_filter) VALUES (10, 'Nachos');
+
 
 /* ================================== reviews_detail ================================== */
 CREATE TABLE reviews_detail (
@@ -431,6 +434,7 @@ INSERT INTO reviews_detail (restaurant_id, user_id, overall_score, food_score, s
 -- INSERT INTO reviews_detail (restaurant_id, user_id, overall_score, food_score, service_score, ambience_score, would_recommend, dined_on_date, review_text) VALUES (10, 21, 1, 1, 2, 1, 1, "2018-10-29", "Pellentesque eget nunc.");
 -- INSERT INTO reviews_detail (restaurant_id, user_id, overall_score, food_score, service_score, ambience_score, would_recommend, dined_on_date, review_text) VALUES (7, 14, 2, 4, 2, 4, 1, "2018-02-10", "Morbi a ipsum.");
 -- INSERT INTO reviews_detail (restaurant_id, user_id, overall_score, food_score, service_score, ambience_score, would_recommend, dined_on_date, review_text) VALUES (10, 14, 1, 3, 1, 1, 0, "2016-12-21", "Maecenas tincidunt lacus at velit.");
+
 
 /* ================================== reviews_summary ================================== */
 CREATE VIEW reviews_summary AS 

@@ -11,7 +11,7 @@ class App extends Component {
       restaurantId: 1,
       reviews: [],
       selectedReviews: [],
-      reviewsSummary: {reviewsFilters:[]},
+      reviewsSummary: { reviewsFilters: [] },
       selectedSortBy: 'Newest',
       sortDropdownOpen: false,
       selectedFilters: [],
@@ -87,7 +87,7 @@ class App extends Component {
   render = () => (
     <div id="app">
       <div id="logo">
-        <img id="logoicon" src="https://s3-us-west-1.amazonaws.com/gitbuckets/tableit_logo.png"></img>
+        <img id="logoicon" src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_logo.png"></img>
         <span>TableIt®</span>
       </div>
       <ReviewsSummary reviewsSummary={this.state.reviewsSummary}/>
