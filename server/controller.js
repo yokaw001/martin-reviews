@@ -1,4 +1,3 @@
-/* eslint-disable no-console */
 const dbHelpers = require('../db/dbHelpers.js');
 
 module.exports = {

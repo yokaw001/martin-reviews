@@ -1,5 +1,5 @@
 import React from 'react';
-import Moment from 'moment';
+import DateFns from 'date-fns';
 
 const ReviewRatings = (props) => (
   <div className="reviewratings">
@@ -9,7 +9,7 @@ const ReviewRatings = (props) => (
         <span className="greystars">{`${("★ ").repeat(5 - props.review.overall_score)}`}</span>
       </div>
       <div className="dinedondate">
-        <span>{`Dined on ${Moment(props.review.dined_on_date).format('MMMM Do, YYYY')}`}</span>
+        <span>{`Dined on ${DateFns.format(props.review.dined_on_date, 'MMMM Do, YYYY')}`}</span>
       </div>
     </div>
     <div className="reviewscores">

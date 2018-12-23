@@ -2,7 +2,11 @@ import React from 'react';
 
 const ReviewsSummary = (props) => (
   <div>
-    {/* {props.reviewsSummary.total_reviews} */}
+    (Reviews Summary goes here)
+
+    {/* Loved for
+      use flex-flow: wrap  
+    */}
   </div>
 );
 
