@@ -11,8 +11,8 @@ class App extends Component {
       restaurantId: 1,
       reviews: [],
       reviewsSummary: {reviewsFilters:[]},
-      currentSortBy: 'Newest',
-      currentFilters: [],
+      selectedSortBy: 'Newest',
+      selectedFilters: [],
     };
   }
 
@@ -37,13 +37,25 @@ class App extends Component {
       });
   };
 
+  toggleFilter = (filterIndex) => {
+    let selectedFilters = [...this.state.selectedFilters];
+    if (selectedFilters.includes(filterIndex)) {
+      selectedFilters.splice(selectedFilters.indexOf(filterIndex), 1);
+    } else {
+      selectedFilters.push(filterIndex);
+    }
+
+    this.setState({ selectedFilters });
+  };
+
   render = () => (
     <div id="app">
       <ReviewsSummary reviewsSummary={this.state.reviewsSummary}/>
       <ReviewsToolbar
         reviewsSummary={this.state.reviewsSummary}
-        currentSortBy={this.state.currentSortBy}
-        currentFilters={this.state.currentFilters}
+        selectedSortBy={this.state.selectedSortBy}
+        selectedFilters={this.state.selectedFilters}
+        toggleFilter={this.toggleFilter}
       />
       <ReviewsList reviews={this.state.reviews}/>
     </div>
