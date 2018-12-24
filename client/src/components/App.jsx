@@ -59,13 +59,13 @@ class App extends Component {
   filterReviews = () => {
     let reviews = [...this.state.reviews];
     let filters = this.state.selectedFilters.map(index => (
-      this.state.reviewsSummary.reviewsFilters[index]
+      this.state.reviewsSummary.reviewsFilters[index].toLowerCase()
     ));
     let selectedReviews = reviews.filter(review => (
       filters.every(filter => (
-        review.review_text.includes(filter)
+        review.review_text.toLowerCase().includes(filter)
       ))
-    ));
+    ))
     this.setState({ selectedReviews });
   };
 
