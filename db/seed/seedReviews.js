@@ -54,10 +54,10 @@ const getInsertForReviewsDetail = () => {
   const restaurantId = Math.floor(Math.random() * 10) + 1;
   const userId = Math.floor(Math.random() * 25) + 1;
   const overallScore = Math.floor(Math.random() * 5) + 1;
-  const foodScore = Math.min(overallScore + Math.floor(Math.random() * 3) - 1, 5);
-  const serviceScore = Math.min(overallScore + Math.floor(Math.random() * 3) - 1, 5);
-  const ambienceScore = Math.min(overallScore + Math.floor(Math.random() * 3) - 1, 5);
-  const wouldRecommend = overallScore > 3 ? 1 : 0;
+  const foodScore = Math.max(Math.min(overallScore + Math.floor(Math.random() * 3) - 1, 5), 1);
+  const serviceScore = Math.max(Math.min(overallScore + Math.floor(Math.random() * 3) - 1, 5), 1);
+  const ambienceScore = Math.max(Math.min(overallScore + Math.floor(Math.random() * 3) - 1, 5), 1);
+  const wouldRecommend = overallScore >= 3 ? 1 : 0;
   const dinedOnDate = `"${dateFns.format(getRandomDate(), 'YYYY-MM-DD')}"`;
   let reviewText;
   if (overallScore < 3) {

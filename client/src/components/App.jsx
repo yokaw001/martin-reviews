@@ -3,6 +3,7 @@ import Axios from 'axios';
 import ReviewsSummary from './ReviewsSummary.jsx';
 import ReviewsToolbar from './ReviewsToolbar.jsx';
 import ReviewsList from './ReviewsList.jsx';
+import ReviewsPagesCarousel from './ReviewsPagesCarousel.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -103,6 +104,7 @@ class App extends Component {
         toggleSortDropdown={this.toggleSortDropdown}
       />
       <ReviewsList selectedReviews={this.state.selectedReviews}/>
+      <ReviewsPagesCarousel />
     </div>
   );
 }
