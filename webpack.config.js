@@ -18,6 +18,11 @@ module.exports = {
           plugins: ['@babel/plugin-proposal-class-properties'],
         },
       },
+      {
+        test: [/\.css$/],
+        loaders: ['style-loader', 'css-loader'],
+        include: path.join(__dirname, 'client'),
+      },
     ],
   },
 };

@@ -19,15 +19,17 @@ class App extends Component {
     };
   }
 
-  componentWillMount() {
-    this.getAllReviews()
+  componentWillMount = () => {
+    const restaurantId = Math.floor(Math.random() * 10) + 1;
+    this.setState({ restaurantId }, () => {
+      this.getAllReviews()
       .then(this.getReviewsSummary);
-  }
+    });
+  };
 
   getAllReviews = () => {
     return Axios.get(`api/reviews/all/${this.state.restaurantId}`)
       .then(({data}) => {
-        console.log(data);
         this.setState({ reviews: data, selectedReviews: data });
       });
   };
@@ -35,7 +37,6 @@ class App extends Component {
   getReviewsSummary = () => {
     return Axios.get(`api/reviews/summary/${this.state.restaurantId}`)
       .then(({data}) => {
-        console.log(data);
         this.setState({ reviewsSummary: data });
       });
   };
