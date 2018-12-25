@@ -6,7 +6,7 @@
   "scripts": {
     "build": "webpack -w",
     "start": "nodemon server/index.js",
-    "seed": "mysql -u root < db/seed/schema.sql",
+    "seed": "mysql -u root < db/seed/seed.sql",
     "test": "jest"
   },
   "repository": {
