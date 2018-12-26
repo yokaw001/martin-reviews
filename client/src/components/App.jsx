@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
+import Logo from './Logo.jsx';
 import ReviewsSummary from './ReviewsSummary.jsx';
 import ReviewsToolbar from './ReviewsToolbar.jsx';
 import ReviewsList from './ReviewsList.jsx';
@@ -12,6 +13,8 @@ class App extends Component {
       restaurantId: null,
       reviews: [],
       selectedReviews: [],
+      reviewsPerPage: 10,
+      currentReviewsPage: 1,
       selectedSortBy: 'Newest',
       selectedFilters: [],
       sortDropdownOpen: false,
@@ -39,6 +42,10 @@ class App extends Component {
       .then(({data}) => {
         this.setState({ reviewsSummary: data });
       });
+  };
+
+  updateReviewsPage = (pageNumber) => {
+    this.setState({ currentReviewsPage: pageNumber });
   };
 
   updateSelectedSortBy = (sortby) => {
@@ -90,10 +97,7 @@ class App extends Component {
 
   render = () => (
     <div id="app">
-      <div id="logo">
-        <img id="logoicon" src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_logo.png"></img>
-        <span>TableIt®</span>
-      </div>
+      <Logo/>
       <ReviewsSummary reviewsSummary={this.state.reviewsSummary}/>
       <ReviewsToolbar
         reviewsSummary={this.state.reviewsSummary}
@@ -104,8 +108,17 @@ class App extends Component {
         toggleFilter={this.toggleFilter}
         toggleSortDropdown={this.toggleSortDropdown}
       />
-      <ReviewsList selectedReviews={this.state.selectedReviews}/>
-      <ReviewsPagesCarousel />
+      <ReviewsList
+        selectedReviews={this.state.selectedReviews}
+        reviewsPerPage={this.state.reviewsPerPage}
+        currentReviewsPage={this.state.currentReviewsPage}
+      />
+      <ReviewsPagesCarousel
+        currentReviewsPage={this.state.currentReviewsPage}
+        selectedReviews={this.state.selectedReviews}
+        reviewsPerPage={this.state.reviewsPerPage}
+        updateReviewsPage={this.updateReviewsPage}
+      />
     </div>
   );
 }
