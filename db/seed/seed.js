@@ -10,7 +10,7 @@ CREATE DATABASE tableit_reviews;
 USE tableit_reviews;
 `;
 
-// populate restaurants table
+
 sql += `
 /* ================================== restaurants ================================== */
 CREATE TABLE restaurants (
@@ -48,16 +48,16 @@ const usernames = ['mhan01', 'jcool00', 'koolaidman', 'coolguy30', 'foodlady21',
 const initials = ['MH', 'LH', 'JK', 'ML', 'JH', 'AH', 'HM', 'FT', 'LO', 'ZL', 'DK', 'DM', 'PM', 'SE', 'TY', 'TG', 'CM', 'WM', 'QA', 'AB', 'PS'];
 const cities = ['New York', 'Los Angeles', 'Beverly Hills', 'San Francisco', 'Houston', 'Austin', 'San Diego', 'Chicago', 'Boston', 'Santa Barbara'];
 
-const getInsertForUsers = () => {
-  const username = getRandomElement(usernames);
+const getInsertForUsers = (username) => {
   const initial = getRandomElement(initials);
   const city = getRandomElement(cities);
 
   return `INSERT INTO users (username, user_initials, user_city) VALUES ("${username}", "${initial}", "${city}");`;
 }
 
-for (let i = 0; i < 25; i += 1) {
-  sql += `${getInsertForUsers()}\n`;
+for (let i = 0; i < usernames.length; i += 1) {
+  const username = usernames[i];
+  sql += `${getInsertForUsers(username)}\n`;
 }
 
 sql += `
@@ -70,7 +70,7 @@ CREATE TABLE review_filters (
 );\n
 `;
 
-const filters = ['burgers', 'burritos', 'pizza', 'tacos', 'sandwiches'];
+const filters = ['Burgers', 'Burritos', 'Pizzas', 'Tacos', 'Sandwiches'];
 
 const getInsertForReviewFilters = (restaurantId, filter) => (
   `INSERT INTO review_filters (restaurant_id, review_filter) VALUES (${restaurantId}, "${filter}");`
@@ -99,16 +99,16 @@ CREATE TABLE reviews_detail (
 );\n
 `;
 
-const foods = ['noodles', 'appetizers', 'happy hour items', 'burgers', 'burritos', 'nachos', 'tacos', 'sandwiches', 'garlic fries', 'carne asada fries', 'soups', 'pepperoni pizzas', 'cheeseburgers', 'kale salads', 'quinoa salads', 'potato salads', 'strawberry smoothies', 'milkshakes', 'fried chicken wings', 'roast chicken', 'shawarma', 'curry', 'garlic naan', 'wings'];
+const foods = ['noodles', 'appetizers', 'happy hour items', 'burgers', 'burritos', 'nachos', 'tacos', 'sandwiches', 'garlic fries', 'carne asada fries', 'soups', 'pepperoni pizzas', 'cheeseburgers', 'kale salads', 'quinoa salads', 'potato salads', 'strawberry smoothies', 'milkshakes', 'fried chicken wings', 'roast chicken', 'shawarmas', 'curry', 'garlic naan', 'wings'];
 const adverbs = ['pretty', 'honestly', 'frankly', 'ridiculously', 'ludicrously', 'soooo', 'frking', 'effing', 'like insanely', '...', 'unbelievably', 'undeniably', 'just plain'];
-const intros = ['We came here for dinner one night and', 'Stopped by for a bite...', 'Came here for my last birthday, and', 'Grabbed lunch here a while ago, and', 'Came on a weekday and'];
+const intros = ['Came here a while ago, and', 'We came here for dinner one night and', 'Stopped by for a bite...', 'Came here for my last birthday, and', 'Grabbed lunch here a while ago, and', 'Came on a weekday and'];
 const posAdjectives = ['awesome', 'lit', 'delicious', 'good', 'great', 'amazing', 'life-affirming', 'life-changing', 'unstoppable', 'un-freaking-believable', 'underrated'];
 const neutralAdjectives = ['decent', 'okay', 'whatever', 'nothing special', 'alright', 'pretty good', 'good, not great', 'meh'];
-const negAdjectives = ['terrible', 'disgusting', 'bad', 'cringe-worthy', 'overrated'];
+const negAdjectives = ['terrible', 'disgusting', 'bad', 'cringe-worthy', 'overrated', 'abysmal', 'yuck'];
 const posSentences = ['Omg it was so good.', 'Definitely going back', 'Going back ASAP!', 'Top ten in LA for sure.', 'Best I\'ve ever had.', 'Top five hands down.'];
 const negSentences = ['Never going back!', 'Would NOT recommend', 'DO NOT GO HERE!', 'This place sucks!', 'I honestly can\'t believe this place is still in business', 'Overall terrible'];
 const posHashtags = ['#lit', '#fire', '#tasty', '#la', '#worldclass', '#elite', '#ontopoftheworld', '#thisishowwedoit', '#cantstopwontstop', '#yeet', '#bitconneeeeect', '#money', '#cashmoney'];
-const negHashtags = ['#overrated', '#nomegusta', '#neveragain', '#notgoingback', '#why'];
+const negHashtags = ['#overrated', '#nomegusta', '#neveragain', '#notgoingback', '#why', '#regrets'];
 
 const getComment = (type) => {
   const intro = getRandomElement(intros);

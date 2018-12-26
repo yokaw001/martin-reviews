@@ -13,9 +13,9 @@ const ReviewRatings = (props) => (
       </div>
     </div>
     <div className="reviewscores">
-      <span className="score">{`Overall  ${props.review.overall_score} • `}</span>
-      <span className="score">{`Food  ${props.review.food_score} • `}</span>
-      <span className="score">{`Service  ${props.review.service_score} • `}</span>
+      <span className="score">{`Overall  ${props.review.overall_score} · `}</span>
+      <span className="score">{`Food  ${props.review.food_score} · `}</span>
+      <span className="score">{`Service  ${props.review.service_score} · `}</span>
       <span className="score">{`Ambience  ${props.review.ambience_score}`}</span>
     </div>
   </div>

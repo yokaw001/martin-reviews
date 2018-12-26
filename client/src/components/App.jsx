@@ -9,13 +9,13 @@ class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      restaurantId: 1,
+      restaurantId: null,
       reviews: [],
       selectedReviews: [],
-      reviewsSummary: { reviewsFilters: [] },
       selectedSortBy: 'Newest',
-      sortDropdownOpen: false,
       selectedFilters: [],
+      sortDropdownOpen: false,
+      reviewsSummary: { reviewsFilters: [] },
     };
   }
 

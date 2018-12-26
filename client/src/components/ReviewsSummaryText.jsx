@@ -26,7 +26,7 @@ const ReviewsSummaryText = (props) => (
     </div>
     <div id="reviewssummarynoise" className="reviewssummarytextitem">
       <img className="reviewssummaryimgsmall" src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_noise_level.png"></img>
-      <strong>Noise:</strong>&nbsp;Moderate
+      <strong>Noise · </strong>&nbsp;Moderate
     </div>
     <div id="reviewssummarypctrecommend" className="reviewssummarytextitem">
       <img className="reviewssummaryimgsmall" src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_recommend_thumb.png"></img>
