@@ -45,7 +45,9 @@ class App extends Component {
   };
 
   updateReviewsPage = (pageNumber) => {
-    this.setState({ currentReviewsPage: pageNumber });
+    const totalPages = Math.ceil(this.state.selectedReviews.length / this.state.reviewsPerPage);
+    const newPageNumber = Math.max(Math.min(pageNumber, totalPages), 1);
+    this.setState({ currentReviewsPage: newPageNumber });
   };
 
   updateSelectedSortBy = (sortby) => {

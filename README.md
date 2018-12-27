@@ -1,9 +1,8 @@
-# martin-restaurant-details
-Restaurant reviews component for OpenTable webpage
+# Description
+Restaurant reviews component for OpenTable product page
 
 # TO DO
-  SQL - automate schema.sql file generation
-
-  Reviews List - add pagination, Read More button functionality, toggle Helpful button, add random color property for username circles
-
-  Reviews Summary - build components (text section, ratings graph, "loved for" list)
+  Reviews List pagination - finish pagination functionality (add "..."s)
+  "Read More" button functionality for long comments
+  Review username - add random color property, add "VIP" flag for random users, add comments icon
+  Reviews Summary - build ratings graph, "loved for" list
