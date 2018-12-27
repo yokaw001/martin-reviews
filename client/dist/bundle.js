@@ -226,7 +226,31 @@ eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var reac
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
-eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar ReviewsPagesCarousel = function ReviewsPagesCarousel(props) {\n  var totalPages = Math.ceil(props.selectedReviews.length / props.reviewsPerPage); // if pageNumber = first, second, second-last, or last, max number of pagenums displayed = 4,\n  // else, max number of pagenums displayed = 5\n  // e.g., if current pagenum = m, display: 1, m - 1, m, m + 1, n\n  // include \"...\" between 1 and m - 1 AND/OR m + 1 and n if not consecutive numbers\n\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"reviewspagecarousel\"\n  }, \"Reviews Page Carousel\");\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ReviewsPagesCarousel);\n\n//# sourceURL=webpack:///./client/src/components/ReviewsPagesCarousel.jsx?");
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n/* harmony import */ var _ReviewsPagesCarouselNumberButton_jsx__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./ReviewsPagesCarouselNumberButton.jsx */ \"./client/src/components/ReviewsPagesCarouselNumberButton.jsx\");\n/* harmony import */ var _ReviewsPagesCarouselDirectionButton_jsx__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ReviewsPagesCarouselDirectionButton.jsx */ \"./client/src/components/ReviewsPagesCarouselDirectionButton.jsx\");\n\n\n\n\nvar ReviewsPagesCarousel = function ReviewsPagesCarousel(props) {\n  var totalPages = Math.ceil(props.selectedReviews.length / props.reviewsPerPage); // if pageNumber = first, second, second-last, or last, max number of pagenums displayed = 4,\n  // \n  // else, max number of pagenums displayed = 5\n  // e.g., if current pagenum = m, display: 1, m - 1, m, m + 1, n\n  // include \"...\" between 1 and m - 1 AND/OR m + 1 and n if not consecutive numbers\n\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    id: \"reviewspagecarousel\"\n  }, react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ReviewsPagesCarouselDirectionButton_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    direction: \"prev\",\n    updateReviewsPage: props.updateReviewsPage,\n    currentReviewsPage: props.currentReviewsPage\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ReviewsPagesCarouselNumberButton_jsx__WEBPACK_IMPORTED_MODULE_1__[\"default\"], {\n    pageNumber: 1,\n    updateReviewsPage: props.updateReviewsPage\n  }), react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(_ReviewsPagesCarouselDirectionButton_jsx__WEBPACK_IMPORTED_MODULE_2__[\"default\"], {\n    direction: \"next\",\n    updateReviewsPage: props.updateReviewsPage,\n    currentReviewsPage: props.currentReviewsPage\n  }));\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ReviewsPagesCarousel);\n\n//# sourceURL=webpack:///./client/src/components/ReviewsPagesCarousel.jsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/ReviewsPagesCarouselDirectionButton.jsx":
+/*!***********************************************************************!*\
+  !*** ./client/src/components/ReviewsPagesCarouselDirectionButton.jsx ***!
+  \***********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar ReviewsPagesCarouselDirectionButton = function ReviewsPagesCarouselDirectionButton(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"pagedirectionbutton\",\n    onClick: function onClick() {\n      props.updateReviewsPage(props.direction === 'next' ? props.currentReviewsPage + 1 : props.currentReviewsPage - 1);\n    }\n  }, props.direction === 'next' ? '>' : '<');\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ReviewsPagesCarouselDirectionButton);\n\n//# sourceURL=webpack:///./client/src/components/ReviewsPagesCarouselDirectionButton.jsx?");
+
+/***/ }),
+
+/***/ "./client/src/components/ReviewsPagesCarouselNumberButton.jsx":
+/*!********************************************************************!*\
+  !*** ./client/src/components/ReviewsPagesCarouselNumberButton.jsx ***!
+  \********************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+eval("__webpack_require__.r(__webpack_exports__);\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ \"./node_modules/react/index.js\");\n/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);\n\n\nvar ReviewsPagesCarouselNumberButton = function ReviewsPagesCarouselNumberButton(props) {\n  return react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement(\"div\", {\n    className: \"pagenumberbutton\",\n    onClick: function onClick() {\n      props.updateReviewsPage(props.pageNumber);\n    }\n  }, props.pageNumber);\n};\n\n/* harmony default export */ __webpack_exports__[\"default\"] = (ReviewsPagesCarouselNumberButton);\n\n//# sourceURL=webpack:///./client/src/components/ReviewsPagesCarouselNumberButton.jsx?");
 
 /***/ }),
 
