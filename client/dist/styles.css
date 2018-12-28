@@ -297,8 +297,16 @@
 }
 
 .userreviewcount {
+  display: flex;
+  align-items: center;
   font-size: 11px;
   color: rgb(111, 115, 123);
+}
+
+.userreviewcounticon {
+  width: 12px;
+  height: 12px;
+  margin-right: 5px;
 }
 
 .reviewbody {
