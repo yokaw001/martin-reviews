@@ -44,7 +44,7 @@ const getRandomElement = arr => (
   arr[Math.floor(Math.random() * arr.length)]
 );
 
-const usernames = ['mhan01', 'jcool00', 'koolaidman', 'coolguy30', 'foodlady21', 'restaurantgirl30', 'opentableperson99', 'tableitdude70', 'carla', 'guy', 'kakashi', 'naruto', 'goku', 'clarkkent', 'bobloblaw', 'michaelscott', 'jimhalpert', 'pambeesly', 'tobyflenderson', 'larrydavid', 'allmight', 'onepunchman29', 'fullmetal70'];
+const usernames = ['mhan01', 'jcool00', 'koolaidman', 'coolguy30', 'foodlady21', 'restaurantgirl30', 'opentableperson99', 'tableitdude70', 'carla', 'guy', 'kakashi', 'naruto', 'goku', 'clarkkent', 'bobloblaw', 'michaelscott', 'jimhalpert', 'pambeesly', 'tobyflenderson', 'larrydavid', 'allmight', 'onepunchman29', 'fullmetal70', 'OpenTableDiner', 'georgemichael', 'TBone', 'Lucille2', 'KevinMalone', 'TPacker', 'dschrute'];
 const initials = ['MH', 'LH', 'JK', 'ML', 'JH', 'AH', 'HM', 'FT', 'LO', 'ZL', 'DK', 'DM', 'PM', 'SE', 'TY', 'TG', 'CM', 'WM', 'QA', 'AB', 'PS'];
 const cities = ['New York', 'Los Angeles', 'Beverly Hills', 'San Francisco', 'Houston', 'Austin', 'San Diego', 'Chicago', 'Boston', 'Santa Barbara'];
 
