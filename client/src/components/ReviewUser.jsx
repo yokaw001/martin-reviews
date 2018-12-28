@@ -3,10 +3,14 @@ import React from 'react';
 const ReviewUser = (props) => {
   const colors = ['#df4e96', '#6c8ae4', '#d86441', '#bb6acd'];
   const randomColor = colors[Math.floor(Math.random() * colors.length)];
+  const randomNumber = Math.random();
 
   return (
     <div className="reviewuser">
-      <div style={{'background-color':randomColor}} className="userinitials"><span>{props.userInitials}</span></div>
+      {randomNumber < 0.3 ? <div className="vip"><span>VIP</span></div> : null}
+      <div style={{'background-color':randomColor}} className="userinitials">
+        <span>{props.userInitials}</span>
+      </div>
       <div className="username">{props.username}</div>
       <div className="usercity">{props.userCity}</div>
       <div className="userreviewcount">
