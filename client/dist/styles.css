@@ -428,7 +428,8 @@
   margin: 0px 10px 0px 10px;
 }
 
-.pagenumberbutton:hover, .pagedirectionbutton:hover {
+
+.pagenumberbutton:hover, .pagedirectionbutton:hover, .currentpagenumberbutton {
   cursor: pointer;
   border: solid rgb(220,20,60) 2px;
   margin: -1px 9px -1px 9px;

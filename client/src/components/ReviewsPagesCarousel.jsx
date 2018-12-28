@@ -8,17 +8,23 @@ const ReviewsPagesCarousel = (props) => {
   let pageNumbers = [];
   pageNumbers.push(1, props.currentReviewsPage - 1, props.currentReviewsPage, props.currentReviewsPage + 1, totalPages)
   pageNumbers = _.uniq(pageNumbers); // remove duplicates
-  for (let i = 0; i < pageNumbers.length; i += 1) { // remove pagenumbers out of range
-    if (pageNumbers[i] < 1 || pageNumbers[i] > totalPages) {
-      pageNumbers.splice(i, 1);
-    }
+  pageNumbers = pageNumbers.filter(num => ( // remove pagenumbers out of range
+    num >= 1 && num <= totalPages
+  ));
+
+  if (props.currentReviewsPage === 1 && !pageNumbers.includes(3)) {
+    pageNumbers.splice(2, 0, 3);
+  } else if (props.currentReviewsPage === totalPages && !pageNumbers.includes(totalPages - 2)) {
+    pageNumbers.splice(pageNumbers.length - 2, 0, totalPages - 2);
   }
 
-  if ([1, 2].includes(props.currentReviewsPage)) {
-    pageNumbers.splice(3, 1);
-  } else if ([totalPages -1, totalPages].includes(props.currentReviewsPage)) {
-    pageNumbers.splice(1, 1);
-  }
+  // if ([1, 2].includes(props.currentReviewsPage)) {
+  //   pageNumbers.splice(3, 1);
+  // } else if ([totalPages -1, totalPages].includes(props.currentReviewsPage)) {
+  //   pageNumbers.splice(1, 1);
+  // }
+
+
   // if pageNumber = 1, 2, n - 1, or n
     // max number of pagenums displayed = 4
     // remove duplicates and pagenums out of range
@@ -40,6 +46,7 @@ const ReviewsPagesCarousel = (props) => {
           <ReviewsPagesCarouselNumberButton
             pageNumber={pageNumber}
             updateReviewsPage={props.updateReviewsPage}
+            currentReviewsPage={props.currentReviewsPage}
           />
         ))}
       </div>
