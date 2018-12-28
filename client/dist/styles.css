@@ -416,6 +416,7 @@
   justify-content: center;
 
 }
+
 .pagenumberbutton, .pagedirectionbutton {
   display: flex;
   align-items: center;
@@ -428,13 +429,15 @@
   margin: 0px 10px 0px 10px;
 }
 
-
 .pagenumberbutton:hover, .pagedirectionbutton:hover, .currentpagenumberbutton {
   cursor: pointer;
   border: solid rgb(220,20,60) 2px;
   margin: -1px 9px -1px 9px;
 }
 
+.pagenumberellipsis {
+  margin: 10px;
+}
 .changereviewspagebutton {
   height: 12px;
   width: 9px;
