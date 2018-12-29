@@ -43,10 +43,25 @@ class App extends Component {
         this.setState({ reviewsSummary: data });
       });
   };
+  
+  selectedReviews = () => {
+    let reviews = [...this.state.reviews];
+    let selectedFilters = this.state.selectedFilters.map(f => f.toLowerCase());
+    let selectedReviews = reviews.filter(review => (
+      selectedFilters.every(selectedFilter => (
+        selectedFilter.slice(1, 6) === ' star' ?
+        review.overall_score === parseInt(selectedFilter[0]) :
+        review.review_text.toLowerCase().includes(selectedFilter)
+      ))
+    ));
+
+    return selectedReviews;
+  };
 
   updateReviewsPage = (pageNumber) => {
-    const totalPages = Math.ceil(this.state.selectedReviews.length / this.state.reviewsPerPage);
-    const newPageNumber = Math.max(Math.min(pageNumber, totalPages), 1);
+    let selectedReviews = this.selectedReviews();
+    const totalPages = Math.ceil(selectedReviews.length / this.state.reviewsPerPage);
+    const newPageNumber = Math.max(Math.min(pageNumber, totalPages), 1); // set max = totalPages, min = 1
     this.setState({ currentReviewsPage: newPageNumber });
   };
 
@@ -128,17 +143,13 @@ class App extends Component {
         toggleSortDropdown={this.toggleSortDropdown}
       />
       <ReviewsList
-        reviews={this.state.reviews}
-        selectedFilters={this.state.selectedFilters}
-        reviewsSummary={this.state.reviewsSummary}
+        selectedReviews={this.selectedReviews}
         reviewsPerPage={this.state.reviewsPerPage}
         currentReviewsPage={this.state.currentReviewsPage}
       />
       <ReviewsPagesCarousel
-        reviews={this.state.reviews}
-        selectedFilters={this.state.selectedFilters}
+        selectedReviews={this.selectedReviews}
         currentReviewsPage={this.state.currentReviewsPage}
-        // selectedReviews={this.state.selectedReviews}
         reviewsPerPage={this.state.reviewsPerPage}
         updateReviewsPage={this.updateReviewsPage}
       />

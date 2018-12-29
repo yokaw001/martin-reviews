@@ -5,25 +5,16 @@ import ReviewsPagesCarouselDirectionButton from './ReviewsPagesCarouselDirection
 import ReviewsPagesCarouselEllipsis from './ReviewsPagesCarouselEllipsis.jsx';
 
 const ReviewsPagesCarousel = (props) => {
-  let reviews = [...props.reviews];
-  let selectedFilters = props.selectedFilters.map(f => f.toLowerCase());
-
-  let selectedReviews = reviews.filter(review => (
-    selectedFilters.every(selectedFilter => (
-      selectedFilter.slice(1, 6) === ' star' ?
-      review.overall_score === parseInt(selectedFilter[0]) :
-      review.review_text.toLowerCase().includes(selectedFilter)
-    ))
-  ));
+  let selectedReviews = props.selectedReviews();
 
   const totalPages = Math.ceil(selectedReviews.length / props.reviewsPerPage);
   let pageNumbers = [1, props.currentReviewsPage - 1, props.currentReviewsPage, props.currentReviewsPage + 1, totalPages];
   pageNumbers = _.uniq(pageNumbers); // remove duplicates
   pageNumbers = pageNumbers.filter(num => ( num >= 1 && num <= totalPages )); // remove pagenumbers out of range
 
-  if (props.currentReviewsPage === 1 && !pageNumbers.includes(3)) { // if current page = 1, add page number 3
+  if (props.currentReviewsPage === 1 && !pageNumbers.includes(3) && totalPages >= 3) { // if current page = 1, add page number 3
     pageNumbers.splice(2, 0, 3);
-  } else if (props.currentReviewsPage === totalPages && !pageNumbers.includes(totalPages - 2)) { // if current page = n, add page # n - 2
+  } else if (props.currentReviewsPage === totalPages && !pageNumbers.includes(totalPages - 2) && totalPages > 2) { // if current page = n, add page # n - 2
     pageNumbers.splice(pageNumbers.length - 2, 0, totalPages - 2);
   }
 
