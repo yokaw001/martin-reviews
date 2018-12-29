@@ -8,7 +8,10 @@ const ReviewsSummaryGraph = (props) => (
         score={score}
         key={i}
         reviews={props.reviews}
+        selectedFilters={props.selectedFilters}
         filterReviewsByScore={props.filterReviewsByScore}
+        addFilterAsSelected={props.addFilterAsSelected}
+        toggleFilter={props.toggleFilter}
       />
     ))}
   </div>

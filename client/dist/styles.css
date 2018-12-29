@@ -250,6 +250,7 @@
 
 #filterslist {
   display: flex;
+  flex-wrap: wrap;
   justify-content: space-start;
   margin: 10px 0px 0px 0px;
 }
@@ -261,7 +262,7 @@
   border: solid #d8d9db 1px;
   border-radius: 3px;
   font-size: 13px;
-  margin: 0px 15px 0px 0px;
+  margin: 8px 15px 8px 0px;
   padding: 9px;
 }
 

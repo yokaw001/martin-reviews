@@ -6,7 +6,13 @@ const Filters = (props) => (
     Filters
     <div id="filterslist">
       {props.reviewsFilters.map((filter, i) => (
-        <Filter filter={filter} key={i} index={i} clicked={props.selectedFilters.includes(i)} toggleFilter={props.toggleFilter} />
+        <Filter
+          filter={filter}
+          key={i}
+          index={i}
+          clicked={props.selectedFilters.includes(filter)}
+          toggleFilter={props.toggleFilter}
+        />
       ))}
     </div>
   </div>

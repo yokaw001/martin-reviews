@@ -6,7 +6,11 @@ const ReviewsSummaryGraphRow = (props) => {
   const scorePct = scoreReviewsCount / totalReviewsCount || 0;
 
   return (
-    <div className="reviewssummarygraphrow" onClick={ () => { props.filterReviewsByScore(props.score); }}>
+    <div className="reviewssummarygraphrow" onClick={ () => {
+      if (!props.selectedFilters.includes(`${props.score} Stars`)) {
+        props.addFilterAsSelected(`${props.score} Stars`);
+      }
+    }}>
       <span className="reviewssummarygraphrownum">{props.score}</span>
       <div className="reviewssummarygraphbar">
         <div className="reviewssummarygraphbarred" style={{width: `${100*scorePct}%`}}></div>

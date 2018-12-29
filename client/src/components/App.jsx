@@ -33,7 +33,6 @@ class App extends Component {
   getAllReviews = () => {
     return Axios.get(`api/reviews/all/${this.state.restaurantId}`)
       .then(({data}) => {
-        console.log(data);
         this.setState({ reviews: data, selectedReviews: data });
       });
   };
@@ -41,7 +40,6 @@ class App extends Component {
   getReviewsSummary = () => {
     return Axios.get(`api/reviews/summary/${this.state.restaurantId}`)
       .then(({data}) => {
-        console.log(data);
         this.setState({ reviewsSummary: data });
       });
   };
@@ -71,37 +69,29 @@ class App extends Component {
     this.setState({ selectedReviews });
   };
 
-  filterReviewsByScore = (overallScore) => {
-    let reviews = [...this.state.reviews];
-    let selectedReviews = reviews.filter(review => (
-      review.overall_score === overallScore
-    ));
-    this.setState({ selectedReviews });
-  }
-
-  filterReviewsByText = () => {
-    let reviews = [...this.state.reviews];
-    let selectedFilters = this.state.selectedFilters.map(index => (
-      this.state.reviewsSummary.reviewsFilters[index].toLowerCase()
-    ));
-    let selectedReviews = reviews.filter(review => (
-      selectedFilters.every(selectedFilter => (
-        review.review_text.toLowerCase().includes(selectedFilter)
-      ))
-    ))
-    this.setState({ selectedReviews });
-  };
-
-  toggleFilter = (filterIndex) => {
+  toggleFilter = (filter) => {
+    // if filter = "X Stars", remove from both selectedFilters AND reviewsSummary.reviewsFilters
     let selectedFilters = [...this.state.selectedFilters];
-    if (selectedFilters.includes(filterIndex)) {
-      selectedFilters.splice(selectedFilters.indexOf(filterIndex), 1);
+    if (selectedFilters.includes(filter)) {
+      selectedFilters.splice(selectedFilters.indexOf(filter), 1);
     } else {
-      selectedFilters.push(filterIndex);
+      selectedFilters.push(filter);
     }
 
-    this.setState({ selectedFilters }, this.filterReviewsByText);
+    this.setState({ selectedFilters }
+      // , this.filterReviewsByText
+    );
   };
+
+  addFilterAsSelected = (filter, cb) => {
+    let reviewsSummary = {...this.state.reviewsSummary};
+    let selectedFilters = [...this.state.selectedFilters];
+    if (!reviewsSummary.reviewsFilters.includes(filter)) {
+      reviewsSummary.reviewsFilters.unshift(filter);
+      selectedFilters.push(reviewsSummary.reviewsFilters.indexOf(filter));
+    }
+    this.setState({ reviewsSummary, selectedFilters }, cb);
+  }
 
   toggleSortDropdown = () => {
     this.setState({ sortDropdownOpen: !this.state.sortDropdownOpen });
@@ -113,7 +103,10 @@ class App extends Component {
       <ReviewsSummary
         reviews={this.state.reviews}
         reviewsSummary={this.state.reviewsSummary}
-        filterReviewsByScore={this.filterReviewsByScore}
+        selectedFilters={this.state.selectedFilters}
+        // filterReviewsByScore={this.filterReviewsByScore}
+        addFilterAsSelected={this.addFilterAsSelected}
+        toggleFilter={this.toggleFilter}
       />
       <ReviewsToolbar
         reviewsSummary={this.state.reviewsSummary}
@@ -125,7 +118,10 @@ class App extends Component {
         toggleSortDropdown={this.toggleSortDropdown}
       />
       <ReviewsList
-        selectedReviews={this.state.selectedReviews}
+        reviews={this.state.reviews}
+        selectedFilters={this.state.selectedFilters}
+        reviewsSummary={this.state.reviewsSummary}
+        // selectedReviews={this.state.selectedReviews}
         reviewsPerPage={this.state.reviewsPerPage}
         currentReviewsPage={this.state.currentReviewsPage}
       />
