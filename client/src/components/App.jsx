@@ -12,7 +12,6 @@ class App extends Component {
     this.state = {
       restaurantId: null,
       reviews: [],
-      // selectedReviews: [],
       reviewsPerPage: 10,
       currentReviewsPage: 1,
       selectedSortBy: 'Newest',
@@ -33,9 +32,7 @@ class App extends Component {
   getAllReviews = () => {
     return Axios.get(`api/reviews/all/${this.state.restaurantId}`)
       .then(({data}) => {
-        this.setState({ reviews: data,
-          //  selectedReviews: data
-        });
+        this.setState({ reviews: data });
       });
   };
 
@@ -56,7 +53,6 @@ class App extends Component {
         review.review_text.toLowerCase().includes(selectedFilter)
       ))
     ));
-
 
     return selectedReviews;
   };
@@ -108,13 +104,9 @@ class App extends Component {
   addOverallScoreFilter = (filter) => {
     let reviewsSummary = {...this.state.reviewsSummary};
     let selectedFilters = [...this.state.selectedFilters];
-    reviewsSummary.reviewsFilters = reviewsSummary.reviewsFilters.filter(filter => (
-      filter.slice(1, 6) !== ' Star'
-    ));
+    reviewsSummary.reviewsFilters = reviewsSummary.reviewsFilters.filter(f => f.slice(1, 6) !== ' Star');
 
-    selectedFilters = selectedFilters.filter(filter => (
-      filter.slice(1, 6) !== ' Star'
-    ));
+    selectedFilters = selectedFilters.filter(f => f.slice(1, 6) !== ' Star');
 
     reviewsSummary.reviewsFilters.unshift(filter);
     selectedFilters.unshift(filter);

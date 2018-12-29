@@ -143,7 +143,7 @@ const getRandomDate = () => {
 const getInsertForReviewsDetail = () => {
   const restaurantId = Math.floor(Math.random() * 10) + 1;
   const userId = Math.floor(Math.random() * 25) + 1;
-  const overallScore = Math.floor(Math.random() * 5) + 1;
+  const overallScore = Math.min(4 + (Math.floor(Math.random() * 7) - 3), 5);
   const foodScore = Math.max(Math.min(overallScore + Math.floor(Math.random() * 3) - 1, 5), 1);
   const serviceScore = Math.max(Math.min(overallScore + Math.floor(Math.random() * 3) - 1, 5), 1);
   const ambienceScore = Math.max(Math.min(overallScore + Math.floor(Math.random() * 3) - 1, 5), 1);
