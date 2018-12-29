@@ -12,7 +12,7 @@ class App extends Component {
     this.state = {
       restaurantId: null,
       reviews: [],
-      selectedReviews: [],
+      // selectedReviews: [],
       reviewsPerPage: 10,
       currentReviewsPage: 1,
       selectedSortBy: 'Newest',
@@ -33,7 +33,9 @@ class App extends Component {
   getAllReviews = () => {
     return Axios.get(`api/reviews/all/${this.state.restaurantId}`)
       .then(({data}) => {
-        this.setState({ reviews: data, selectedReviews: data });
+        this.setState({ reviews: data,
+          //  selectedReviews: data
+        });
       });
   };
 
@@ -55,6 +57,7 @@ class App extends Component {
       ))
     ));
 
+
     return selectedReviews;
   };
 
@@ -70,8 +73,8 @@ class App extends Component {
   };
 
   sortReviews = () => {
-    let selectedReviews = [...this.state.selectedReviews];
-    selectedReviews.sort((a,b) => {
+    let reviews = [...this.state.reviews];
+    reviews.sort((a,b) => {
       if (this.state.selectedSortBy === 'Newest') {
         return a.dined_on_date > b.dined_on_date ? -1 : 1;
       } else if (this.state.selectedSortBy === 'Highest Rating') {
@@ -81,7 +84,7 @@ class App extends Component {
       }
     });
 
-    this.setState({ selectedReviews });
+    this.setState({ reviews });
   };
 
   toggleFilter = (filter) => {
