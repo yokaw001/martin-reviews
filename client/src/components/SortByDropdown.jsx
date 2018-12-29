@@ -1,4 +1,4 @@
-import React, { Component } from 'react';
+import React from 'react';
 
 const SortByDropdown = (props) => (
   <div id="sortbydropdown">

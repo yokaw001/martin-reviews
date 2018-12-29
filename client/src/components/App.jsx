@@ -33,6 +33,7 @@ class App extends Component {
   getAllReviews = () => {
     return Axios.get(`api/reviews/all/${this.state.restaurantId}`)
       .then(({data}) => {
+        console.log(data);
         this.setState({ reviews: data, selectedReviews: data });
       });
   };
@@ -40,6 +41,7 @@ class App extends Component {
   getReviewsSummary = () => {
     return Axios.get(`api/reviews/summary/${this.state.restaurantId}`)
       .then(({data}) => {
+        console.log(data);
         this.setState({ reviewsSummary: data });
       });
   };
@@ -69,7 +71,15 @@ class App extends Component {
     this.setState({ selectedReviews });
   };
 
-  filterReviews = () => {
+  filterReviewsByScore = (overallScore) => {
+    let reviews = [...this.state.reviews];
+    let selectedReviews = reviews.filter(review => (
+      review.overall_score === overallScore
+    ));
+    this.setState({ selectedReviews });
+  }
+
+  filterReviewsByText = () => {
     let reviews = [...this.state.reviews];
     let selectedFilters = this.state.selectedFilters.map(index => (
       this.state.reviewsSummary.reviewsFilters[index].toLowerCase()
@@ -90,7 +100,7 @@ class App extends Component {
       selectedFilters.push(filterIndex);
     }
 
-    this.setState({ selectedFilters }, this.filterReviews);
+    this.setState({ selectedFilters }, this.filterReviewsByText);
   };
 
   toggleSortDropdown = () => {
@@ -100,7 +110,11 @@ class App extends Component {
   render = () => (
     <div id="app">
       <Logo/>
-      <ReviewsSummary reviewsSummary={this.state.reviewsSummary}/>
+      <ReviewsSummary
+        reviews={this.state.reviews}
+        reviewsSummary={this.state.reviewsSummary}
+        filterReviewsByScore={this.filterReviewsByScore}
+      />
       <ReviewsToolbar
         reviewsSummary={this.state.reviewsSummary}
         selectedSortBy={this.state.selectedSortBy}

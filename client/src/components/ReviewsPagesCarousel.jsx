@@ -17,36 +17,41 @@ const ReviewsPagesCarousel = (props) => {
   }
 
   for (let i = 0; i < pageNumbers.length; i++) {
-    if ((pageNumbers[i] !== '···') && (pageNumbers[i] !== pageNumbers[i + 1] - 1) && (i !== pageNumbers.length - 1)) {
+    if ((pageNumbers[i] !== '···') && (pageNumbers[i] < pageNumbers[i + 1] - 1)) {
       pageNumbers.splice(i + 1, 0, '···');
     }
   }
 
-  return (
-    <div id="reviewspagecarousel">
-      <ReviewsPagesCarouselDirectionButton
-        direction="prev"
-        updateReviewsPage={props.updateReviewsPage}
-        currentReviewsPage={props.currentReviewsPage}
-      />
-      <div id="pagenumberbuttonslist">
-        {pageNumbers.map((pageNumber, i) => (
-          pageNumber === '···' ? 
-          <ReviewsPagesCarouselEllipsis /> :
-          <ReviewsPagesCarouselNumberButton
-            pageNumber={pageNumber}
-            updateReviewsPage={props.updateReviewsPage}
-            currentReviewsPage={props.currentReviewsPage}
-          />
-        ))}
+  if (totalPages > 1) {
+    return (
+      <div id="reviewspagecarousel">
+        <ReviewsPagesCarouselDirectionButton
+          direction="prev"
+          updateReviewsPage={props.updateReviewsPage}
+          currentReviewsPage={props.currentReviewsPage}
+        />
+        <div id="pagenumberbuttonslist">
+          {pageNumbers.map((pageNumber, i) => (
+            pageNumber === '···' ? 
+            <ReviewsPagesCarouselEllipsis key={i}/> :
+            <ReviewsPagesCarouselNumberButton
+              pageNumber={pageNumber}
+              updateReviewsPage={props.updateReviewsPage}
+              currentReviewsPage={props.currentReviewsPage}
+              key={i}
+            />
+          ))}
+        </div>
+        <ReviewsPagesCarouselDirectionButton
+          direction="next"
+          updateReviewsPage={props.updateReviewsPage}
+          currentReviewsPage={props.currentReviewsPage}
+        />
       </div>
-      <ReviewsPagesCarouselDirectionButton
-        direction="next"
-        updateReviewsPage={props.updateReviewsPage}
-        currentReviewsPage={props.currentReviewsPage}
-      />
-    </div>
-  );
+    );
+  } else {
+    return null;
+  }
 };
 
 export default ReviewsPagesCarousel

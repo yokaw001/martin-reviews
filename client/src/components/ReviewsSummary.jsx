@@ -9,7 +9,11 @@ const ReviewsSummary = (props) => (
     </div>
     <div id="reviewssummarybody">
       <ReviewsSummaryText reviewsSummary={props.reviewsSummary} />
-      <ReviewsSummaryGraph reviewsSummary={props.reviewsSummary} />
+      <ReviewsSummaryGraph
+        reviews={props.reviews}
+        reviewsSummary={props.reviewsSummary}
+        filterReviewsByScore={props.filterReviewsByScore}
+      />
     </div>
   </div>
 );

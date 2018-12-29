@@ -8,7 +8,7 @@ const ReviewUser = (props) => {
   return (
     <div className="reviewuser">
       {randomDigit < 3 ? <div className="vip"><span>VIP</span></div> : null}
-      <div style={{'background-color':randomColor}} className="userinitials">
+      <div style={{'backgroundColor':randomColor}} className="userinitials">
         <span>{props.userInitials}</span>
       </div>
       <div className="username">{props.username}</div>
