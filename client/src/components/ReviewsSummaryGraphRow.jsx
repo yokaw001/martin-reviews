@@ -8,7 +8,7 @@ const ReviewsSummaryGraphRow = (props) => {
   return (
     <div className="reviewssummarygraphrow" onClick={ () => {
       if (!props.selectedFilters.includes(`${props.score} Stars`)) {
-        props.addFilterAsSelected(`${props.score} Stars`);
+        props.addOverallScoreFilter(`${props.score} Stars`);
       }
     }}>
       <span className="reviewssummarygraphrownum">{props.score}</span>

@@ -13,8 +13,7 @@ const ReviewsSummary = (props) => (
         reviews={props.reviews}
         reviewsSummary={props.reviewsSummary}
         selectedFilters={props.selectedFilters}
-        // filterReviewsByScore={props.filterReviewsByScore}
-        addFilterAsSelected={props.addFilterAsSelected}
+        addOverallScoreFilter={props.addOverallScoreFilter}
         toggleFilter={props.toggleFilter}
       />
     </div>

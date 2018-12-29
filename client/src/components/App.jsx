@@ -70,27 +70,38 @@ class App extends Component {
   };
 
   toggleFilter = (filter) => {
-    // if filter = "X Stars", remove from both selectedFilters AND reviewsSummary.reviewsFilters
     let selectedFilters = [...this.state.selectedFilters];
-    if (selectedFilters.includes(filter)) {
+    let reviewsSummary = {...this.state.reviewsSummary};
+
+    if (filter.slice(1, 6) === ' Star') {
       selectedFilters.splice(selectedFilters.indexOf(filter), 1);
+      reviewsSummary.reviewsFilters.splice(reviewsSummary.reviewsFilters.indexOf(filter), 1);
     } else {
-      selectedFilters.push(filter);
+      if (selectedFilters.includes(filter)) {
+        selectedFilters.splice(selectedFilters.indexOf(filter), 1);
+      } else {
+        selectedFilters.push(filter);
+      }  
     }
 
-    this.setState({ selectedFilters }
-      // , this.filterReviewsByText
-    );
+    this.setState({ selectedFilters, reviewsSummary, currentReviewsPage: 1 });
   };
 
-  addFilterAsSelected = (filter, cb) => {
+  addOverallScoreFilter = (filter) => {
     let reviewsSummary = {...this.state.reviewsSummary};
     let selectedFilters = [...this.state.selectedFilters];
-    if (!reviewsSummary.reviewsFilters.includes(filter)) {
-      reviewsSummary.reviewsFilters.unshift(filter);
-      selectedFilters.push(reviewsSummary.reviewsFilters.indexOf(filter));
-    }
-    this.setState({ reviewsSummary, selectedFilters }, cb);
+    reviewsSummary.reviewsFilters = reviewsSummary.reviewsFilters.filter(filter => (
+      filter.slice(1, 6) !== ' Star'
+    ));
+
+    selectedFilters = selectedFilters.filter(filter => (
+      filter.slice(1, 6) !== ' Star'
+    ));
+
+    reviewsSummary.reviewsFilters.unshift(filter);
+    selectedFilters.unshift(filter);
+
+    this.setState({ reviewsSummary, selectedFilters, currentReviewsPage: 1 });
   }
 
   toggleSortDropdown = () => {
@@ -104,8 +115,7 @@ class App extends Component {
         reviews={this.state.reviews}
         reviewsSummary={this.state.reviewsSummary}
         selectedFilters={this.state.selectedFilters}
-        // filterReviewsByScore={this.filterReviewsByScore}
-        addFilterAsSelected={this.addFilterAsSelected}
+        addOverallScoreFilter={this.addOverallScoreFilter}
         toggleFilter={this.toggleFilter}
       />
       <ReviewsToolbar
@@ -121,13 +131,14 @@ class App extends Component {
         reviews={this.state.reviews}
         selectedFilters={this.state.selectedFilters}
         reviewsSummary={this.state.reviewsSummary}
-        // selectedReviews={this.state.selectedReviews}
         reviewsPerPage={this.state.reviewsPerPage}
         currentReviewsPage={this.state.currentReviewsPage}
       />
       <ReviewsPagesCarousel
+        reviews={this.state.reviews}
+        selectedFilters={this.state.selectedFilters}
         currentReviewsPage={this.state.currentReviewsPage}
-        selectedReviews={this.state.selectedReviews}
+        // selectedReviews={this.state.selectedReviews}
         reviewsPerPage={this.state.reviewsPerPage}
         updateReviewsPage={this.updateReviewsPage}
       />

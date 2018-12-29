@@ -3,9 +3,7 @@ import Review from './Review.jsx';
 
 const ReviewsList = (props) => {
   let reviews = [...props.reviews];
-  let selectedFilters = props.selectedFilters.map(filter => (
-    filter.toLowerCase()
-  ));
+  let selectedFilters = props.selectedFilters.map(f =>  f.toLowerCase());
 
   let selectedReviews = reviews.filter(review => (
     selectedFilters.every(selectedFilter => (

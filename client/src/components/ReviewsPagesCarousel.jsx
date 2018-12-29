@@ -5,7 +5,18 @@ import ReviewsPagesCarouselDirectionButton from './ReviewsPagesCarouselDirection
 import ReviewsPagesCarouselEllipsis from './ReviewsPagesCarouselEllipsis.jsx';
 
 const ReviewsPagesCarousel = (props) => {
-  const totalPages = Math.ceil(props.selectedReviews.length / props.reviewsPerPage);
+  let reviews = [...props.reviews];
+  let selectedFilters = props.selectedFilters.map(f => f.toLowerCase());
+
+  let selectedReviews = reviews.filter(review => (
+    selectedFilters.every(selectedFilter => (
+      selectedFilter.slice(1, 6) === ' star' ?
+      review.overall_score === parseInt(selectedFilter[0]) :
+      review.review_text.toLowerCase().includes(selectedFilter)
+    ))
+  ));
+
+  const totalPages = Math.ceil(selectedReviews.length / props.reviewsPerPage);
   let pageNumbers = [1, props.currentReviewsPage - 1, props.currentReviewsPage, props.currentReviewsPage + 1, totalPages];
   pageNumbers = _.uniq(pageNumbers); // remove duplicates
   pageNumbers = pageNumbers.filter(num => ( num >= 1 && num <= totalPages )); // remove pagenumbers out of range
