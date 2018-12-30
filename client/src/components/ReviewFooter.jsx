@@ -14,14 +14,14 @@ class ReviewFooter extends Component {
 
   render = () => (
     <div className="reviewfooter">
-      <div className="readmore">+ Read More</div>
+      <div className="reviewreadmore">+ Read More</div>
       <div className="reviewbtns">
-        <div className="reportbtn">
-          <img className="rpticon" src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_report_icon.png"></img>
+        <div className="reviewreportbtn">
+          <img className="reviewreporticon" src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_report_icon.png"></img>
           <span>Report</span>
         </div>
-        <div className="helpfulbtn" onClick={ this.toggleHelpful }>
-          <img className="helpfulicon" src={this.state.helpful ?
+        <div className="reviewhelpfulbtn" onClick={ this.toggleHelpful }>
+          <img className="reviewhelpfulicon" src={this.state.helpful ?
             "https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_helpful_icon_full.png" :
             "https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_helpful_icon_empty.png"}
           ></img>

@@ -1,9 +1,9 @@
 import React from 'react';
 
 const SummaryScoreAvg = (props) => (
-  <div className="reviewssummaryscoreavg">
-    <div className="reviewssummaryscoreavgnum">{props.score}</div>
-    <div className="reviewssummaryscoreavgcat">{props.category}</div>
+  <div className="summaryscoreavg">
+    <div className="summaryscoreavgnum">{props.score}</div>
+    <div className="summaryscoreavgcat">{props.category}</div>
   </div>
 );
 

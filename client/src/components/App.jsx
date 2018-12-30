@@ -104,7 +104,7 @@ class App extends Component {
   addOverallScoreFilter = (filter) => {
     let reviewsSummary = {...this.state.reviewsSummary};
     let selectedFilters = [...this.state.selectedFilters];
-    // remove any pre-existing score filters
+    // remove pre-existing score filters
     reviewsSummary.reviewsFilters = reviewsSummary.reviewsFilters.filter(f => f.slice(1, 6) !== ' Star');
     selectedFilters = selectedFilters.filter(f => f.slice(1, 6) !== ' Star');
 

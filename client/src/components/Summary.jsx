@@ -4,11 +4,11 @@ import SummaryBarChart from './SummaryBarChart.jsx';
 import LovedFor from './LovedFor.jsx';
 
 const Summary = (props) => (
-  <div id="reviewssummary">
-    <div id="reviewssummaryheader">
+  <div id="summary">
+    <div id="summaryheader">
       What {props.reviewsSummary.total_reviews} People Are Saying
     </div>
-    <div id="reviewssummarybody">
+    <div id="summarybody">
       <SummaryText reviewsSummary={props.reviewsSummary} />
       <SummaryBarChart
         reviews={props.reviews}

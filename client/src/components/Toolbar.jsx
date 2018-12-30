@@ -3,7 +3,7 @@ import Filters from './Filters.jsx';
 import SortByMenu from './SortByMenu.jsx';
 
 const Toolbar = (props) => (
-  <div id="reviewstoolbar">
+  <div id="toolbar">
     <SortByMenu
       sortDropdownOpen={props.sortDropdownOpen}
       selectedSortBy={props.selectedSortBy}

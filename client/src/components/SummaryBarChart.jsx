@@ -2,7 +2,7 @@ import React from 'react';
 import SummaryBarChartRow from './SummaryBarChartRow.jsx';
 
 const SummaryBarChart = (props) => (
-  <div id="reviewssummarygraph">
+  <div id="summarybarchart">
     {[5, 4, 3, 2, 1].map((score, i) => (
       <SummaryBarChartRow
         score={score}

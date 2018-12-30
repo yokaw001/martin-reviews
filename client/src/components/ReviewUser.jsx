@@ -8,13 +8,13 @@ const ReviewUser = (props) => {
   return (
     <div className="reviewuser">
       {randomDigit < 3 ? <div className="vip"><span>VIP</span></div> : null}
-      <div style={{'backgroundColor':randomColor}} className="userinitials">
+      <div style={{'backgroundColor':randomColor}} className="reviewuserinitials">
         <span>{props.userInitials}</span>
       </div>
-      <div className="username">{props.username}</div>
-      <div className="usercity">{props.userCity}</div>
-      <div className="userreviewcount">
-        <img className="userreviewcounticon" src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_review_user_comments_icon.png"></img>
+      <div className="reviewusername">{props.username}</div>
+      <div className="reviewusercity">{props.userCity}</div>
+      <div className="reviewuserreviewcount">
+        <img className="reviewuserreviewcounticon" src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_review_user_comments_icon.png"></img>
         <span>{props.reviewCount + ' reviews'}</span>
       </div>
     </div>

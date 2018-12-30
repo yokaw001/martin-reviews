@@ -26,7 +26,7 @@ const PagesCarousel = (props) => {
 
   if (totalPages > 1) {
     return (
-      <div id="reviewspagecarousel">
+      <div id="pagescarousel">
         <PagesCarouselDirectionButton
           direction="prev"
           updateReviewsPage={props.updateReviewsPage}
