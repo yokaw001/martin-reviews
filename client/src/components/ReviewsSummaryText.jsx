@@ -1,6 +1,5 @@
 import React from 'react';
 import ReviewsSummaryScoreAvg from './reviewssummaryscoreavg.jsx';
-import LovedForItem from './LovedForItem.jsx';
 
 const ReviewsSummaryText = (props) => {
   let overallScore = props.reviewsSummary.avg_overall, overallScoreStars = [];

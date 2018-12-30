@@ -12,7 +12,7 @@ const LovedFor = (props) => (
       <LovedForItem item="Notable Wine List" city="Downtown / South and East LA" />
       <LovedForItem item="Special Occasion" city="Downtown / South and East LA" />
     </div>
-    <div id="bestrestaurants"className="reviewssummarytextitem">Best Restaurants in Downtown</div>
+    <div id="bestrestaurants"className="reviewssummarytextitem">Best Restaurants in Downtown ›</div>
   </div>
 );
 
