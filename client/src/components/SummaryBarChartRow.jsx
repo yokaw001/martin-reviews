@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ReviewsSummaryGraphRow = (props) => {
+const SummaryBarChartRow = (props) => {
   const totalReviewsCount = props.reviews.length;
   const scoreReviewsCount = props.reviews.filter(review => (review.overall_score === props.score)).length;
   const scorePct = scoreReviewsCount / totalReviewsCount || 0;
@@ -20,4 +20,4 @@ const ReviewsSummaryGraphRow = (props) => {
   );
 };
 
-export default ReviewsSummaryGraphRow;
+export default SummaryBarChartRow;

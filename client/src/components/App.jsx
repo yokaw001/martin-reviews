@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
 import Logo from './Logo.jsx';
-import ReviewsSummary from './ReviewsSummary.jsx';
-import ReviewsToolbar from './ReviewsToolbar.jsx';
+import Summary from './Summary.jsx';
+import Toolbar from './Toolbar.jsx';
 import ReviewsList from './ReviewsList.jsx';
-import ReviewsPagesCarousel from './ReviewsPagesCarousel.jsx';
+import PagesCarousel from './PagesCarousel.jsx';
 
 class App extends Component {
   constructor(props) {
@@ -39,7 +39,6 @@ class App extends Component {
   getReviewsSummary = () => {
     return Axios.get(`api/reviews/summary/${this.state.restaurantId}`)
       .then(({data}) => {
-        console.log(data);
         this.setState({ reviewsSummary: data });
       });
   };
@@ -105,8 +104,8 @@ class App extends Component {
   addOverallScoreFilter = (filter) => {
     let reviewsSummary = {...this.state.reviewsSummary};
     let selectedFilters = [...this.state.selectedFilters];
+    // remove any pre-existing score filters
     reviewsSummary.reviewsFilters = reviewsSummary.reviewsFilters.filter(f => f.slice(1, 6) !== ' Star');
-
     selectedFilters = selectedFilters.filter(f => f.slice(1, 6) !== ' Star');
 
     reviewsSummary.reviewsFilters.unshift(filter);
@@ -122,14 +121,14 @@ class App extends Component {
   render = () => (
     <div id="app">
       <Logo/>
-      <ReviewsSummary
+      <Summary
         reviews={this.state.reviews}
         reviewsSummary={this.state.reviewsSummary}
         selectedFilters={this.state.selectedFilters}
         addOverallScoreFilter={this.addOverallScoreFilter}
         toggleFilter={this.toggleFilter}
       />
-      <ReviewsToolbar
+      <Toolbar
         reviewsSummary={this.state.reviewsSummary}
         selectedSortBy={this.state.selectedSortBy}
         sortDropdownOpen={this.state.sortDropdownOpen}
@@ -143,7 +142,7 @@ class App extends Component {
         reviewsPerPage={this.state.reviewsPerPage}
         currentReviewsPage={this.state.currentReviewsPage}
       />
-      <ReviewsPagesCarousel
+      <PagesCarousel
         selectedReviews={this.selectedReviews}
         currentReviewsPage={this.state.currentReviewsPage}
         reviewsPerPage={this.state.reviewsPerPage}

@@ -1,10 +1,10 @@
 import React from 'react';
 import _ from 'underscore';
-import ReviewsPagesCarouselNumberButton from './ReviewsPagesCarouselNumberButton.jsx';
-import ReviewsPagesCarouselDirectionButton from './ReviewsPagesCarouselDirectionButton.jsx';
-import ReviewsPagesCarouselEllipsis from './ReviewsPagesCarouselEllipsis.jsx';
+import PagesCarouselNumberButton from './PagesCarouselNumberButton.jsx';
+import PagesCarouselDirectionButton from './PagesCarouselDirectionButton.jsx';
+import PagesCarouselEllipsis from './PagesCarouselEllipsis.jsx';
 
-const ReviewsPagesCarousel = (props) => {
+const PagesCarousel = (props) => {
   let selectedReviews = props.selectedReviews();
 
   const totalPages = Math.ceil(selectedReviews.length / props.reviewsPerPage);
@@ -27,7 +27,7 @@ const ReviewsPagesCarousel = (props) => {
   if (totalPages > 1) {
     return (
       <div id="reviewspagecarousel">
-        <ReviewsPagesCarouselDirectionButton
+        <PagesCarouselDirectionButton
           direction="prev"
           updateReviewsPage={props.updateReviewsPage}
           currentReviewsPage={props.currentReviewsPage}
@@ -35,8 +35,8 @@ const ReviewsPagesCarousel = (props) => {
         <div id="pagenumberbuttonslist">
           {pageNumbers.map((pageNumber, i) => (
             pageNumber === '···' ? 
-            <ReviewsPagesCarouselEllipsis key={i}/> :
-            <ReviewsPagesCarouselNumberButton
+            <PagesCarouselEllipsis key={i}/> :
+            <PagesCarouselNumberButton
               pageNumber={pageNumber}
               updateReviewsPage={props.updateReviewsPage}
               currentReviewsPage={props.currentReviewsPage}
@@ -44,7 +44,7 @@ const ReviewsPagesCarousel = (props) => {
             />
           ))}
         </div>
-        <ReviewsPagesCarouselDirectionButton
+        <PagesCarouselDirectionButton
           direction="next"
           updateReviewsPage={props.updateReviewsPage}
           currentReviewsPage={props.currentReviewsPage}
@@ -56,4 +56,4 @@ const ReviewsPagesCarousel = (props) => {
   }
 };
 
-export default ReviewsPagesCarousel
+export default PagesCarousel;

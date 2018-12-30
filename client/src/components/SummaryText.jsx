@@ -1,5 +1,5 @@
 import React from 'react';
-import ReviewsSummaryScoreAvg from './reviewssummaryscoreavg.jsx';
+import SummaryScoreAvg from './SummaryScoreAvg.jsx';
 
 const ReviewsSummaryText = (props) => {
   let overallScore = props.reviewsSummary.avg_overall, overallScoreStars = [];
@@ -27,10 +27,10 @@ const ReviewsSummaryText = (props) => {
         <span>{props.reviewsSummary.avg_overall} based on recent ratings</span>
       </div>
       <div id="reviewssummaryscoreavgs" className="reviewssummarytextitem">
-        <ReviewsSummaryScoreAvg score={props.reviewsSummary.avg_food} category="Food" />
-        <ReviewsSummaryScoreAvg score={props.reviewsSummary.avg_service} category="Service" />
-        <ReviewsSummaryScoreAvg score={props.reviewsSummary.avg_ambience} category="Ambience" />
-        <ReviewsSummaryScoreAvg score={props.reviewsSummary.avg_value} category="Value" />
+        <SummaryScoreAvg score={props.reviewsSummary.avg_food} category="Food" />
+        <SummaryScoreAvg score={props.reviewsSummary.avg_service} category="Service" />
+        <SummaryScoreAvg score={props.reviewsSummary.avg_ambience} category="Ambience" />
+        <SummaryScoreAvg score={props.reviewsSummary.avg_value} category="Value" />
       </div>
       <div id="reviewssummarynoise" className="reviewssummarytextitem">
         <img className="reviewssummaryimgsmall" src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_noise_level.png"></img>

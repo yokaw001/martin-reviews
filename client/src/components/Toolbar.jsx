@@ -2,7 +2,7 @@ import React from 'react';
 import Filters from './Filters.jsx';
 import SortByMenu from './SortByMenu.jsx';
 
-const ReviewsToolbar = (props) => (
+const Toolbar = (props) => (
   <div id="reviewstoolbar">
     <SortByMenu
       sortDropdownOpen={props.sortDropdownOpen}
@@ -18,4 +18,4 @@ const ReviewsToolbar = (props) => (
   </div>
 );
 
-export default ReviewsToolbar;
+export default Toolbar;

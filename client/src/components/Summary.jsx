@@ -1,16 +1,16 @@
 import React from 'react';
-import ReviewsSummaryText from './ReviewsSummaryText.jsx';
-import ReviewsSummaryGraph from './ReviewsSummaryGraph.jsx';
+import SummaryText from './SummaryText.jsx';
+import SummaryBarChart from './SummaryBarChart.jsx';
 import LovedFor from './LovedFor.jsx';
 
-const ReviewsSummary = (props) => (
+const Summary = (props) => (
   <div id="reviewssummary">
     <div id="reviewssummaryheader">
       What {props.reviewsSummary.total_reviews} People Are Saying
     </div>
     <div id="reviewssummarybody">
-      <ReviewsSummaryText reviewsSummary={props.reviewsSummary} />
-      <ReviewsSummaryGraph
+      <SummaryText reviewsSummary={props.reviewsSummary} />
+      <SummaryBarChart
         reviews={props.reviews}
         reviewsSummary={props.reviewsSummary}
         selectedFilters={props.selectedFilters}
@@ -22,4 +22,4 @@ const ReviewsSummary = (props) => (
   </div>
 );
 
-export default ReviewsSummary;
+export default Summary;

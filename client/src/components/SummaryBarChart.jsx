@@ -1,10 +1,10 @@
 import React from 'react';
-import ReviewsSummaryGraphRow from './ReviewsSummaryGraphRow.jsx';
+import SummaryBarChartRow from './SummaryBarChartRow.jsx';
 
-const ReviewsSummaryGraph = (props) => (
+const SummaryBarChart = (props) => (
   <div id="reviewssummarygraph">
     {[5, 4, 3, 2, 1].map((score, i) => (
-      <ReviewsSummaryGraphRow
+      <SummaryBarChartRow
         score={score}
         key={i}
         reviews={props.reviews}
@@ -17,4 +17,4 @@ const ReviewsSummaryGraph = (props) => (
   </div>
 );
 
-export default ReviewsSummaryGraph;
+export default SummaryBarChart;

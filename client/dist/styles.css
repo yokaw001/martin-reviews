@@ -162,6 +162,12 @@
   margin: 7px 14px 7px 0px;
 }
 
+.lovedforitem:hover {
+  cursor: pointer;
+  border: solid rgb(220,20,60) 2px;
+  margin: 6px 13px 6px -1px;
+}
+
 .lovedforiconcontainer {
   width: 15%;
   /* border: solid black 1px; */
@@ -514,7 +520,7 @@
 .reviewtext {
   flex-grow: 1;
   font-size: 15px;
-  font-weight: 325;
+  font-weight: 335;
   margin: 5px;
   color: #2d333f;
   /* border: solid black 1px; */

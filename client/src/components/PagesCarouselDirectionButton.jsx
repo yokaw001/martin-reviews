@@ -1,6 +1,6 @@
 import React from 'react';
 
-const ReviewsPagesCarouselDirectionButton = (props) => (
+const PagesCarouselDirectionButton = (props) => (
   <div className="pagedirectionbutton" onClick={
     () => {props.updateReviewsPage((props.direction === 'next' ? props.currentReviewsPage + 1 : props.currentReviewsPage - 1));}
   }>
@@ -12,4 +12,4 @@ const ReviewsPagesCarouselDirectionButton = (props) => (
   </div>
 );
 
-export default ReviewsPagesCarouselDirectionButton;
+export default PagesCarouselDirectionButton;
