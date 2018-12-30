@@ -93,8 +93,20 @@
 }
 
 #reviewssummaryrecentratings {
+  display: flex;
+  align-items: center;
   font-size: 13px;
   font-weight: 500;
+}
+
+#recentratingsstars {
+  margin-right: 5px;
+}
+
+.recentratingsstar {
+  width: 16px;
+  height: 16px;
+  margin: 2px;
 }
 
 #reviewssummarynoise {
