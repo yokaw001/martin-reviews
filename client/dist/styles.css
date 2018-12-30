@@ -155,8 +155,8 @@
 
 .lovedforitem {
   display: flex;
+  justify-content: space-between;
   height: 50px;
-  width: 250px;
   border: solid 1px #d8d9db;
   margin: 7px 14px 7px 0px;
 }
@@ -167,15 +167,10 @@
   margin: 6px 13px 6px -1px;
 }
 
-.lovedforiconcontainer {
-  width: 15%;
-  /* border: solid black 1px; */
-}
-
 .lovedforicon {
   height: 20px;
   width: 20px;
-  margin: 5px;
+  margin: 5px 0px 5px 5px;
   /* border: solid black 1px; */
 }
 
@@ -183,7 +178,7 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
-  width: 85%;
+  margin: 12px;
   /* border: solid black 1px; */
 }
 

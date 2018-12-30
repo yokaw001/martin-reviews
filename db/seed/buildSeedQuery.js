@@ -144,7 +144,7 @@ const getRandomDate = () => {
 const getInsertForReviewsDetail = () => {
   const restaurantId = Math.floor(Math.random() * 10) + 1;
   const userId = Math.floor(Math.random() * 25) + 1;
-  const overallScore = Math.min(4 + (Math.floor(Math.random() * 8) - 3), 5);
+  const overallScore = Math.min(10 + (Math.floor(Math.random() * 18) - 9), 5);
   const foodScore = Math.max(Math.min(overallScore + Math.floor(Math.random() * 3) - 1, 5), 1);
   const serviceScore = Math.max(Math.min(overallScore + Math.floor(Math.random() * 3) - 1, 5), 1);
   const ambienceScore = Math.max(Math.min(overallScore + Math.floor(Math.random() * 3) - 1, 5), 1);
@@ -176,7 +176,7 @@ const getInsertForReviewsDetail = () => {
   return `INSERT INTO reviews_detail (restaurant_id, user_id, overall_score, food_score, service_score, ambience_score, value_score, would_recommend, dined_on_date, review_text) VALUES (${[...sqlParams].join(', ')});`;
 };
 
-for (let i = 0; i < 500; i += 1) {
+for (let i = 0; i < 1000; i += 1) {
   sql += `${getInsertForReviewsDetail()}\n`;
 }
 
