@@ -19,7 +19,7 @@ const ReviewsSummaryText = (props) => (
           <div className="reviewssummaryscoreavgnum">{props.reviewsSummary.avg_ambience}</div>
           <div className="reviewssummaryscoreavgcat">Ambience</div>
         </div><div className="reviewssummaryscoreavg">
-          <div className="reviewssummaryscoreavgnum">{props.reviewsSummary.avg_overall}</div>
+          <div className="reviewssummaryscoreavgnum">{props.reviewsSummary.avg_value}</div>
           <div className="reviewssummaryscoreavgcat">Value</div>
         </div> 
       </div>

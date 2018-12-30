@@ -93,6 +93,7 @@ CREATE TABLE reviews_detail (
   food_score INT,
   service_score INT,
   ambience_score INT,
+  value_score INT,
   would_recommend BOOLEAN,
   dined_on_date DATE,
   PRIMARY KEY(id)
@@ -147,6 +148,7 @@ const getInsertForReviewsDetail = () => {
   const foodScore = Math.max(Math.min(overallScore + Math.floor(Math.random() * 3) - 1, 5), 1);
   const serviceScore = Math.max(Math.min(overallScore + Math.floor(Math.random() * 3) - 1, 5), 1);
   const ambienceScore = Math.max(Math.min(overallScore + Math.floor(Math.random() * 3) - 1, 5), 1);
+  const valueScore = Math.max(Math.min(overallScore + Math.floor(Math.random() * 3) - 1, 5), 1);
   const wouldRecommend = overallScore >= 3 ? 1 : 0;
   const dinedOnDate = `"${dateFns.format(getRandomDate(), 'YYYY-MM-DD')}"`;
   let reviewText;
@@ -165,12 +167,13 @@ const getInsertForReviewsDetail = () => {
     foodScore,
     serviceScore,
     ambienceScore,
+    valueScore,
     wouldRecommend,
     dinedOnDate,
     reviewText,
   ];
 
-  return `INSERT INTO reviews_detail (restaurant_id, user_id, overall_score, food_score, service_score, ambience_score, would_recommend, dined_on_date, review_text) VALUES (${[...sqlParams].join(', ')});`;
+  return `INSERT INTO reviews_detail (restaurant_id, user_id, overall_score, food_score, service_score, ambience_score, value_score, would_recommend, dined_on_date, review_text) VALUES (${[...sqlParams].join(', ')});`;
 };
 
 for (let i = 0; i < 500; i += 1) {
@@ -187,6 +190,7 @@ SELECT
   CAST(AVG(food_score) AS DECIMAL(2,1)) avg_food,
   CAST(AVG(service_score) AS DECIMAL(2,1)) avg_service,
   CAST(AVG(ambience_score) AS DECIMAL(2,1)) avg_ambience,
+  CAST(AVG(value_score) AS DECIMAL(2,1)) avg_value,
   SUM(would_recommend) / COUNT(*) pct_recommend,
   "${filters[0]}" review_filter_1,
   "${filters[1]}" review_filter_2,

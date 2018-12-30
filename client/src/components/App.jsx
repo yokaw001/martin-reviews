@@ -32,6 +32,7 @@ class App extends Component {
   getAllReviews = () => {
     return Axios.get(`api/reviews/all/${this.state.restaurantId}`)
       .then(({data}) => {
+        console.log(data);
         this.setState({ reviews: data });
       });
   };
