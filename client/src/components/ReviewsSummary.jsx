@@ -1,6 +1,7 @@
 import React from 'react';
 import ReviewsSummaryText from './ReviewsSummaryText.jsx';
 import ReviewsSummaryGraph from './ReviewsSummaryGraph.jsx';
+import LovedFor from './LovedFor.jsx';
 
 const ReviewsSummary = (props) => (
   <div id="reviewssummary">
@@ -17,6 +18,7 @@ const ReviewsSummary = (props) => (
         toggleFilter={props.toggleFilter}
       />
     </div>
+    <LovedFor />
   </div>
 );
 
