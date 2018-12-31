@@ -14,7 +14,9 @@ class ReviewFooter extends Component {
 
   render = () => (
     <div className="reviewfooter">
-      <div className="reviewreadmore">+ Read More</div>
+      <div className="reviewreadmore" onClick={this.props.toggleExpanded}>
+        {this.props.overflow || this.props.expanded ? (this.props.expanded ? '- Read Less' : '+ Read More') : ''}
+      </div>
       <div className="reviewbtns">
         <div className="reviewreportbtn">
           <img className="reviewreporticon" src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_report_icon.png"></img>

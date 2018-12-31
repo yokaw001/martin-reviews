@@ -1,7 +1,7 @@
 import React from 'react';
 import SummaryScoreAvg from './SummaryScoreAvg.jsx';
 
-const ReviewsSummaryText = (props) => {
+const SummaryText = (props) => {
   let overallScore = props.reviewsSummary.avg_overall, overallScoreStars = [];
 
   for (let i = 0; i < 5; i += 1) {
@@ -20,8 +20,8 @@ const ReviewsSummaryText = (props) => {
       <div className="summarytextitem">Reviews can only be made by diners who have eaten at this restaurant</div>
       <div id="summaryrecentratings" className="summarytextitem">
         <div id="summaryrecentratingsstars">
-          {overallScoreStars.map(star => (
-            <img className="summaryrecentratingsstar" src={`https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_star_${star}.png`}></img>
+          {overallScoreStars.map((star, i) => (
+            <img className="summaryrecentratingsstar" src={`https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_star_${star}.png`} key={i}></img>
           ))}
         </div>
         <span>{props.reviewsSummary.avg_overall} based on recent ratings</span>
@@ -44,4 +44,4 @@ const ReviewsSummaryText = (props) => {
   );
 };
 
-export default ReviewsSummaryText;
+export default SummaryText;

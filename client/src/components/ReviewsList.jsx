@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { Component } from 'react';
 import Review from './Review.jsx';
 
 const ReviewsList = (props) => (
@@ -10,7 +10,11 @@ const ReviewsList = (props) => (
         return i >= minIndex && i <= maxIndex;
       })
       .map((review, i) => (
-      <Review review={review} key={i}/>
+        <Review
+          review={review}
+          index={i}
+          key={i}
+        />
       )
     )}
   </div>

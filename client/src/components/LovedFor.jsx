@@ -14,7 +14,9 @@ const LovedFor = (props) => (
       <LovedForItem item="Best Overall" city="Los Angeles" />
       <LovedForItem item="Best Value" city="Los Angeles" />
     </div>
-    <div id="bestrestaurants"className="reviewssummarytextitem">Best Restaurants in Downtown ›</div>
+    <div id="bestrestaurantscontainer" className="reviewssummarytextitem">
+      <span id="bestrestaurants">Best Restaurants in Downtown ›</span>
+    </div>
   </div>
 );
 

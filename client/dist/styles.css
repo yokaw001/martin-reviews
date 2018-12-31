@@ -194,11 +194,15 @@
   margin: 2px;
 }
 
+#bestrestaurantscontainer {
+  margin-bottom: 30px;
+}
+
 #bestrestaurants {
   font-size: 15px;
   font-weight: 250;
   color: #da3743;
-  margin-bottom: 30px;
+  /* border: solid 1px black; */
 }
 
 #bestrestaurants:hover {
@@ -385,9 +389,14 @@
   align-items: stretch;
   width: 100%;
   height: 200px;
+  /* height: auto; */
   border-bottom: solid 1px #d8d9db;
   font-size: 13px;
   /* border: solid black 1px; */
+}
+
+.reviewexpanded {
+  height: auto;
 }
 
 .reviewuser {
@@ -455,7 +464,7 @@
 .reviewbody {
   display: flex;
   flex-direction: column;
-  flex-grow: 1;
+  /* flex-grow: 1; */
   align-items: stretch;
   width: 500px;
   /* border: solid black 1px; */
@@ -471,7 +480,7 @@
   display: flex;
   align-items: center;
   font-size: 15px;
-  margin: 8px 5px 5px 5px;
+  margin: 10px 5px 5px 5px;
   /* border: solid black 1px; */
 }
 
@@ -512,21 +521,34 @@
 }
 
 .reviewtext {
-  flex-grow: 1;
+  height: 40%;
+  /* height: auto; */
   font-size: 15px;
   font-weight: 335;
+  line-height: 1.5;
   margin: 5px;
   color: #2d333f;
+  overflow: hidden;
   /* border: solid black 1px; */
+}
+
+.reviewtextexpanded {
+  height: auto;
 }
 
 .reviewfooter {
   display: flex;
   justify-content: space-between;
+  align-items: center;
   font-size: 15px;
-  margin: 10px 5px 10px 5px;
+  margin: 20px 5px 20px 5px;
   color: rgb(220,20,60);
   /* border: solid black 1px; */
+}
+
+.reviewreadmore:hover {
+  cursor: pointer;
+  text-decoration: underline;
 }
 
 .reviewbtns {

@@ -11,8 +11,9 @@ const Filter = (props) => {
         "https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_reviews_checkbox_full.png"
         : "https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_reviews_checkbox_empty.png"}
       ></img>
-      <span>{`${props.filter} (${reviewCount})`}</span>
+      <span>{`${props.filter} ${props.filter.slice(1, 6) === ' Star' ? '' : `(${reviewCount})`}`}</span>
     </div>
   );
 };
+
 export default Filter;

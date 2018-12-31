@@ -119,7 +119,7 @@ const getComment = (type) => {
     const adjective = getRandomElement(posAdjectives);
     const sentence = getRandomElement(posSentences);
     const hashtag = Math.random() < 0.2 ? getRandomElement(posHashtags) : '';
-    return `${intro} the ${food} are ${adverb} ${adjective}! ${sentence} ${hashtag}`;
+    return `${intro} the ${food} are ${adverb} ${adjective}! ${sentence} ${hashtag}`.repeat(10);
   }
 
   if (type === 'negative') {
