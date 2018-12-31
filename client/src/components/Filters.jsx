@@ -7,6 +7,7 @@ const Filters = (props) => (
     <div id="filterslist">
       {props.reviewsFilters.map((filter, i) => (
         <Filter
+          reviews={props.reviews}
           filter={filter}
           key={i}
           index={i}

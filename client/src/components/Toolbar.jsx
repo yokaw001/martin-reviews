@@ -10,7 +10,8 @@ const Toolbar = (props) => (
       updateSelectedSortBy={props.updateSelectedSortBy}
       toggleSortDropdown={props.toggleSortDropdown}
     />
-    <Filters 
+    <Filters
+      reviews={props.reviews}
       reviewsFilters={props.reviewsSummary.reviewsFilters}
       toggleFilter={props.toggleFilter}
       selectedFilters={props.selectedFilters}

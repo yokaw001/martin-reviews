@@ -129,6 +129,7 @@ class App extends Component {
         toggleFilter={this.toggleFilter}
       />
       <Toolbar
+        reviews={this.state.reviews}
         reviewsSummary={this.state.reviewsSummary}
         selectedSortBy={this.state.selectedSortBy}
         sortDropdownOpen={this.state.sortDropdownOpen}
