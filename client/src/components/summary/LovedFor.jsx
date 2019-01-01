@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import LovedForItem from './LovedForItem.jsx';
-import helpers from '../lib/helpers.js';
+import helpers from '../../lib/helpers.js';
 
 class LovedFor extends Component {
   constructor(props) {
