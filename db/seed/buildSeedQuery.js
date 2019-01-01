@@ -106,7 +106,7 @@ const intros = ['Came here a while ago, and', 'We came here for dinner one night
 const posAdjectives = ['awesome', 'lit', 'delicious', 'good', 'great', 'amazing', 'life-affirming', 'life-changing', 'unstoppable', 'un-freaking-believable', 'underrated'];
 const neutralAdjectives = ['decent', 'okay', 'whatever', 'nothing special', 'alright', 'pretty good', 'good, not great', 'meh'];
 const negAdjectives = ['terrible', 'disgusting', 'bad', 'cringe-worthy', 'overrated', 'abysmal', 'yuck'];
-const posSentences = ['Omg it was so good.', 'Definitely going back', 'Going back ASAP!', 'Top ten in LA for sure.', 'Best I\'ve ever had.', 'Top five hands down.'];
+const posSentences = ['I LOVE THIS PLACE!', 'Omg it was so good.', 'Definitely going back.', 'Going back ASAP!', 'Top ten in LA for sure.', 'Best I\'ve ever had.', 'Top five hands down.', 'I loved it.', 'My new favorite spot.', 'It was so memorable!'];
 const negSentences = ['Never going back!', 'Would NOT recommend', 'DO NOT GO HERE!', 'This place sucks!', 'I honestly can\'t believe this place is still in business', 'Overall terrible'];
 const posHashtags = ['#lit', '#fire', '#tasty', '#la', '#worldclass', '#elite', '#ontopoftheworld', '#thisishowwedoit', '#cantstopwontstop', '#yeet', '#bitconneeeeect', '#money', '#cashmoney'];
 const negHashtags = ['#overrated', '#nomegusta', '#neveragain', '#notgoingback', '#why', '#regrets'];
@@ -115,18 +115,29 @@ const getComment = (type) => {
   const intro = getRandomElement(intros);
   const food = getRandomElement(foods);
   const adverb = getRandomElement(adverbs);
+  const longComment = Math.random() < 0.2;
   if (type === 'positive') {
     const adjective = getRandomElement(posAdjectives);
-    const sentence = getRandomElement(posSentences);
     const hashtag = Math.random() < 0.2 ? getRandomElement(posHashtags) : '';
-    return `${intro} the ${food} are ${adverb} ${adjective}! ${sentence} ${hashtag}`.repeat(10);
+
+    let comment = '';
+    comment += `${intro} the ${food} are ${adverb} ${adjective}!`;
+    for (let i = 0; i < (longComment ? 10 : 1); i += 1) { comment += ` ${getRandomElement(posSentences)}`; }
+    comment += hashtag;
+
+    return comment;
   }
 
   if (type === 'negative') {
     const adjective = getRandomElement(negAdjectives);
-    const sentence = getRandomElement(negSentences);
     const hashtag = Math.random() < 0.2 ? getRandomElement(negHashtags) : '';
-    return `${intro} the ${food} are ${adverb} ${adjective}! ${sentence} ${hashtag}`;
+
+    let comment = '';
+    comment += `${intro} the ${food} are ${adverb} ${adjective}!`;
+    for (let i = 0; i < (longComment ? 10 : 1); i += 1) { comment += ` ${getRandomElement(negSentences)}`; }
+    comment += hashtag;
+
+    return comment;
   }
 
   if (type === 'neutral') {
