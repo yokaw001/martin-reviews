@@ -113,7 +113,9 @@ class App extends Component {
     reviewsSummary.reviewsFilters.unshift(filter);
     selectedFilters.unshift(filter);
 
-    this.setState({ reviewsSummary, selectedFilters, currentReviewsPage: 1 });
+    this.setState({ reviewsSummary, selectedFilters, currentReviewsPage: 1 }, () => {
+      window.scrollTo(0, 500);
+    });
   }
 
   toggleSortDropdown = () => {

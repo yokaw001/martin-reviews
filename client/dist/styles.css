@@ -494,8 +494,8 @@ html {
 .reviewratings {
   display: flex;
   flex-direction: column;
-  /* justify-content: space-between; */
-  height: 80px;
+  min-height: 80px;
+  max-height: 80px;
   /* border: solid black 1px; */
 }
 
