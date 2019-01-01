@@ -100,7 +100,9 @@ class App extends Component {
       }  
     }
 
-    this.setState({ selectedFilters, reviewsSummary, currentReviewsPage: 1 });
+    this.setState({ selectedFilters, reviewsSummary, currentReviewsPage: 1 }, () => {
+      window.scrollTo(0, 500);
+    });
   };
 
   addOverallScoreFilter = (filter) => {
