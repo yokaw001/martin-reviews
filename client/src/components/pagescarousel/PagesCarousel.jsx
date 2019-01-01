@@ -3,6 +3,7 @@ import _ from 'underscore';
 import PagesCarouselNumberButton from './PagesCarouselNumberButton.jsx';
 import PagesCarouselDirectionButton from './PagesCarouselDirectionButton.jsx';
 import PagesCarouselEllipsis from './PagesCarouselEllipsis.jsx';
+import styles from '../../styles/pagescarousel/PagesCarousel.css';
 
 const PagesCarousel = (props) => {
   let selectedReviews = props.selectedReviews();

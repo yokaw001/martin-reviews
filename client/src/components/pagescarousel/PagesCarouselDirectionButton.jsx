@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../../styles/pagescarousel/PagesCarouselDirectionButton.css';
 
 const PagesCarouselDirectionButton = (props) => (
   <div className="pagedirectionbutton" onClick={

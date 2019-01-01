@@ -1,0 +1,13 @@
+#logo {
+  display: flex;
+  align-items: center;
+  font-size: 22px;
+  font-weight: bold;
+  color: #2d333f;
+}
+
+#logoicon {
+  height: 38px;
+  width: 50px;
+  margin-right: 4px;
+}

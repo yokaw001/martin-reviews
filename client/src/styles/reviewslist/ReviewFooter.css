@@ -1,0 +1,38 @@
+.reviewfooter {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 15px;
+  margin: 20px 5px 20px 5px;
+  color: rgb(220,20,60);
+  /* border: solid black 1px; */
+}
+
+.reviewreadmore:hover {
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.reviewbtns {
+  display: flex;
+  align-items: center;
+}
+
+.reviewreportbtn, .reviewhelpfulbtn {
+  display: flex;
+  align-content: center;
+  margin: 0px 8px 0px 8px;
+  color: #2d333f;
+  font-size: 12px;
+  font-weight: 450;
+}
+
+.reviewreportbtn:hover, .reviewhelpfulbtn:hover {
+  cursor: pointer;
+}
+
+.reviewreporticon, .reviewhelpfulicon {
+  width: 18px;
+  height: 18px;
+  margin-right: 5px;
+}

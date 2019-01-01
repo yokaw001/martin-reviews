@@ -1,5 +1,6 @@
 import React from 'react';
 import SummaryBarChartRow from './SummaryBarChartRow.jsx';
+import styles from '../../styles/summary/SummaryBarChart.css';
 
 const SummaryBarChart = (props) => (
   <div id="summarybarchart">

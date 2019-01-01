@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../../styles/reviewslist/ReviewUser.css';
 
 const ReviewUser = (props) => {
   const colors = ['#df4e96', '#6c8ae4', '#d86441', '#bb6acd'];

@@ -1,0 +1,22 @@
+.pagedirectionbutton {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 30px;
+  width: 30px;
+  border: solid #d8d9db 1px;
+  border-radius: 50%;
+  font-size: 15px;
+  margin: 0px 10px 0px 10px;
+}
+
+.pagedirectionbutton:hover {
+  cursor: pointer;
+  border: solid rgb(220,20,60) 2px;
+  margin: -1px 9px -1px 9px;
+}
+
+.changereviewspagebutton {
+  height: 12px;
+  width: 9px;
+}

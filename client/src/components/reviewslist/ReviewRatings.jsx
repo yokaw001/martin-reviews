@@ -1,5 +1,6 @@
 import React from 'react';
 import DateFns from 'date-fns';
+import styles from '../../styles/reviewslist/ReviewRatings.css';
 
 const ReviewRatings = (props) => (
   <div className="reviewratings">

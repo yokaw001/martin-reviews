@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import LovedForItem from './LovedForItem.jsx';
 import helpers from '../../lib/helpers.js';
+import styles from '../../styles/summary/LovedFor.css';
 
 class LovedFor extends Component {
   constructor(props) {

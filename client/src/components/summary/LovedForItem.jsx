@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../../styles/summary/LovedForItem.css';
 
 const LovedForItem = (props) => (
   <div className="lovedforitem">

@@ -2,6 +2,7 @@ import React from 'react';
 import ReviewRatings from './ReviewRatings.jsx';
 import ReviewText from './ReviewText.jsx';
 import ReviewFooter from './ReviewFooter.jsx';
+import styles from '../../styles/reviewslist/ReviewBody.css';
 
 const ReviewBody = (props) => (
   <div className="reviewbody">

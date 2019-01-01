@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../../styles/summary/SummaryBarChartRow.css';
 
 const SummaryBarChartRow = (props) => {
   const totalReviewsCount = props.reviews.length;

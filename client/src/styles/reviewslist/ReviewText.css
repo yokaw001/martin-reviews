@@ -1,0 +1,14 @@
+.reviewtext {
+  height: 45%;
+  font-size: 15px;
+  font-weight: 335;
+  line-height: 1.5;
+  margin: 5px;
+  color: #2d333f;
+  overflow: hidden;
+  /* border: solid black 1px; */
+}
+
+.reviewtextexpanded {
+  overflow: visible;
+}

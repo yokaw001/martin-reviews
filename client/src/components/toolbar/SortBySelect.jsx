@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../../styles/toolbar/SortBySelect.css';
 
 const SortBySelect = (props) => (
   <div id="sortbyselect" onClick={props.toggleSortDropdown}>

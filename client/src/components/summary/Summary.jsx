@@ -2,6 +2,7 @@ import React from 'react';
 import SummaryText from './SummaryText.jsx';
 import SummaryBarChart from './SummaryBarChart.jsx';
 import LovedFor from './LovedFor.jsx';
+import styles from '../../styles/summary/Summary.css';
 
 const Summary = (props) => (
   <div id="summary">

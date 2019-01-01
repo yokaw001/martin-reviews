@@ -1,0 +1,52 @@
+#summarytext {
+  width: 55%;
+  /* border: solid black 1px; */
+}
+
+#summarysubheader {
+  font-weight: 550;
+}
+
+.summarytextitem {
+  margin: 0px 0px 15px 0px;
+}
+
+#summaryrecentratings {
+  display: flex;
+  align-items: center;
+  font-size: 13px;
+  font-weight: 500;
+}
+
+#summaryrecentratingsstars {
+  margin-right: 5px;
+}
+
+.summaryrecentratingsstar {
+  width: 16px;
+  height: 16px;
+  margin: 2px;
+}
+
+#summaryscoreavgs {
+  display: flex;
+}
+
+#summarynoise {
+  display: flex;
+  align-content: center;
+  font-size: 13px;
+}
+
+.summaryimgsmall {
+  height: 17px;
+  width: 17px;
+  margin: 0px 15px 0px 0px;
+}
+
+#summarypctrecommend {
+  display:flex;
+  align-content: center;
+  font-size: 13px;
+  /* border: solid black 1px; */
+}

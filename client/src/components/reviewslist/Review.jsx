@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import ReviewUser from './ReviewUser.jsx';
 import ReviewBody from './ReviewBody.jsx';
+import styles from '../../styles/reviewslist/Review.css';
+
 
 class Review extends Component {
   constructor(props) {

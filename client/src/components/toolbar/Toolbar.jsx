@@ -1,6 +1,7 @@
 import React from 'react';
 import Filters from './Filters.jsx';
 import SortByMenu from './SortByMenu.jsx';
+import styles from '../../styles/toolbar/Toolbar.css';
 
 const Toolbar = (props) => (
   <div id="toolbar">

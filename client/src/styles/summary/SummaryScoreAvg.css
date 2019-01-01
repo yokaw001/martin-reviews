@@ -1,0 +1,19 @@
+.summaryscoreavg {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 10px 0px 10px;
+  border-right: solid 1px #d8d9db;
+}
+
+.summaryscoreavg:nth-of-type(4){
+  border-right: solid 1px white;
+}
+.summaryscoreavgnum {
+  font-weight: 500;
+  font-size: 16px;
+}
+
+.summaryscoreavgcat {
+  font-size: 13px; 
+}

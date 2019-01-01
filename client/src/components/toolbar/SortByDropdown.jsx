@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../../styles/toolbar/SortByDropdown.css';
 
 const SortByDropdown = (props) => (
   <div id="sortbydropdown">

@@ -1,4 +1,5 @@
 import React from 'react';
+import styles from '../../styles/toolbar/Filter.css';
 
 const Filter = (props) => {
   const reviewCount = props.reviews.filter(review => (

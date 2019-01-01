@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import styles from '../../styles/reviewslist/ReviewFooter.css';
 
 class ReviewFooter extends Component {
   constructor(props) {

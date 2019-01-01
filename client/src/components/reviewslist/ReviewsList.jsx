@@ -1,5 +1,6 @@
 import React, { Component } from 'react';
 import Review from './Review.jsx';
+import styles from '../../styles/reviewslist/ReviewsList.css';
 
 const ReviewsList = (props) => (
   <div id="reviewslist">

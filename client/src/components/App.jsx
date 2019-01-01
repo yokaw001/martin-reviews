@@ -5,6 +5,7 @@ import Summary from './summary/Summary.jsx';
 import Toolbar from './toolbar/Toolbar.jsx';
 import ReviewsList from './reviewslist/ReviewsList.jsx';
 import PagesCarousel from './pagescarousel/PagesCarousel.jsx';
+import styles from '../styles/App.css';
 
 class App extends Component {
   constructor(props) {

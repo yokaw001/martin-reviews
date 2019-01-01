@@ -1,6 +1,7 @@
 import React from 'react';
 import SortBySelect from './SortBySelect.jsx';
 import SortByDropdown from './SortByDropdown.jsx';
+import styles from '../../styles/toolbar/SortByMenu.css';
 
 const SortbyMenu = (props) => (
   <div id="sortbymenu">

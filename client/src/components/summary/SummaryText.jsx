@@ -1,5 +1,6 @@
 import React from 'react';
 import SummaryScoreAvg from './SummaryScoreAvg.jsx';
+import styles from '../../styles/summary/SummaryText.css';
 
 const SummaryText = (props) => {
   let overallScore = props.reviewsSummary.avg_overall, overallScoreStars = [];
