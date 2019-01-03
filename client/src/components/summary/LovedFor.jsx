@@ -25,27 +25,23 @@ class LovedFor extends Component {
   };
 
   hasOverflow = () => {
-    const element = document.getElementById('lovedforitemslist');
+    const element = document.getElementsByClassName(styles.lovedforitemslist);
     return element.scrollHeight > element.clientHeight;
   };
 
   render = () => (
-    <div id="lovedfor" className="reviewssummarytextitem">
-      <div id="lovedforheader">
+    <div className={styles.lovedfor} className={styles.reviewssummarytextitem}>
+      <div className={styles.lovedforheader}>
         Loved For
-        <img id="info" src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_reviews_summary_info_icon.png"></img>
+        <img className={styles.info} src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_reviews_summary_info_icon.png"></img>
       </div>
-      <div id="lovedforitemslist">
+      <div className={styles.lovedforitemslist}>
         {this.state.lovedForItems.map((a, i) => (
           <LovedForItem item={a.item} city={a.city} key={i} />
         ))}
-        {/* {(this.state.overflow && !this.state.expanded) ? 
-          <div className="lovedforexpandbtn">{"+ 4 More"}</div> :
-          null
-        } */}
       </div>
-      <div id="bestrestaurantscontainer" className="reviewssummarytextitem">
-        <span id="bestrestaurants">Best Restaurants in Downtown ›</span>
+      <div className={styles.bestrestaurantscontainer + ' ' + styles.reviewssummarytextitem}>
+        <span className={styles.bestrestaurants}>Best Restaurants in Downtown ›</span>
       </div>
     </div>
   );

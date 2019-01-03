@@ -39,7 +39,7 @@ class Review extends Component {
   };
 
   render = () => (
-    <div className={this.state.expanded ? "review reviewexpanded": "review"}>
+    <div className={this.state.expanded ? styles.review + ' ' + styles.reviewexpanded: styles.review}>
       <ReviewUser
         username={this.props.review.username}
         userInitials={this.props.review.user_initials}

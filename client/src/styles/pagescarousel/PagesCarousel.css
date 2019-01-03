@@ -1,13 +1,12 @@
-#pagescarousel {
+.pagescarousel {
   display: flex;
   justify-content: space-between;
   align-items: center;
   margin: 10px 0px 10px 0px;
   width: 100%;
-  /* border: solid black 1px; */
 }
 
-#pagenumberbuttonslist {
+.pagenumberbuttonslist {
   display: flex;
   align-items: center;
   justify-content: center;

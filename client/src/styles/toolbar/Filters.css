@@ -1,4 +1,4 @@
-#filters {
+.filters {
   display: flex;
   flex-direction: column;
   justify-content: space-start;
@@ -6,7 +6,7 @@
   font-weight: 500;
 }
 
-#filterslist {
+.filterslist {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-start;

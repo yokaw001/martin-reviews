@@ -2,17 +2,17 @@ import React from 'react';
 import styles from '../../styles/toolbar/SortByDropdown.css';
 
 const SortByDropdown = (props) => (
-  <div id="sortbydropdown">
-    <div className="sortbydropdownitem" onClick={() => props.updateSelectedSortBy('Newest')}>
-      <div className={props.selectedSortBy === 'Newest' ? "dropdowncirclefull" : "dropdowncircleempty"}></div>
+  <div className={styles.sortbydropdown}>
+    <div className={styles.sortbydropdownitem} onClick={() => props.updateSelectedSortBy('Newest')}>
+      <div className={props.selectedSortBy === 'Newest' ? styles.dropdowncirclefull : styles.dropdowncircleempty}></div>
       <span>Newest</span>
     </div>
-    <div className="sortbydropdownitem" onClick={() => props.updateSelectedSortBy('Highest Rating')}>
-        <div className={props.selectedSortBy === 'Highest Rating' ? "dropdowncirclefull" : "dropdowncircleempty"}></div>
+    <div className={styles.sortbydropdownitem} onClick={() => props.updateSelectedSortBy('Highest Rating')}>
+        <div className={props.selectedSortBy === 'Highest Rating' ? styles.dropdowncirclefull : styles.dropdowncircleempty}></div>
         <span>Highest Rating</span>
     </div>
-    <div className="sortbydropdownitem" onClick={() => props.updateSelectedSortBy('Lowest Rating')}>
-      <div className={props.selectedSortBy === 'Lowest Rating' ? "dropdowncirclefull" : "dropdowncircleempty"}></div>
+    <div className={styles.sortbydropdownitem} onClick={() => props.updateSelectedSortBy('Lowest Rating')}>
+      <div className={props.selectedSortBy === 'Lowest Rating' ? styles.dropdowncirclefull : styles.dropdowncircleempty}></div>
       <span>Lowest Rating</span>
     </div>
   </div>

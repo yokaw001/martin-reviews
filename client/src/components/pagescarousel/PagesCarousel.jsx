@@ -27,13 +27,13 @@ const PagesCarousel = (props) => {
 
   if (totalPages > 1) {
     return (
-      <div id="pagescarousel">
+      <div className={styles.pagescarousel}>
         <PagesCarouselDirectionButton
           direction="prev"
           updateReviewsPage={props.updateReviewsPage}
           currentReviewsPage={props.currentReviewsPage}
         />
-        <div id="pagenumberbuttonslist">
+        <div className={styles.pagenumberbuttonslist}>
           {pageNumbers.map((pageNumber, i) => (
             pageNumber === '···' ? 
             <PagesCarouselEllipsis key={i}/> :

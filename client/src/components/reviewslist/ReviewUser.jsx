@@ -7,15 +7,15 @@ const ReviewUser = (props) => {
   const randomDigit = parseInt(props.username.length.toString().split('').pop());
 
   return (
-    <div className="reviewuser">
+    <div className={styles.reviewuser}>
       {randomDigit < 3 ? <div className="vip"><span>VIP</span></div> : null}
-      <div style={{'backgroundColor':randomColor}} className="reviewuserinitials">
+      <div style={{'backgroundColor':randomColor}} className={styles.reviewuserinitials}>
         <span>{props.userInitials}</span>
       </div>
-      <div className="reviewusername">{props.username}</div>
-      <div className="reviewusercity">{props.userCity}</div>
-      <div className="reviewuserreviewcount">
-        <img className="reviewuserreviewcounticon" src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_review_user_comments_icon.png"></img>
+      <div className={styles.reviewusername}>{props.username}</div>
+      <div className={styles.reviewusercity}>{props.userCity}</div>
+      <div className={styles.reviewuserreviewcount}>
+        <img className={styles.reviewuserreviewcounticon} src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_review_user_comments_icon.png"></img>
         <span>{props.reviewCount + ' reviews'}</span>
       </div>
     </div>

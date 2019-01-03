@@ -14,17 +14,17 @@ class ReviewFooter extends Component {
   };
 
   render = () => (
-    <div className="reviewfooter">
-      <div className="reviewreadmore" onClick={this.props.toggleExpanded}>
+    <div className={styles.reviewfooter}>
+      <div className={styles.reviewreadmore} onClick={this.props.toggleExpanded}>
         {this.props.overflow || this.props.expanded ? (this.props.expanded ? '- Read Less' : '+ Read More') : ''}
       </div>
-      <div className="reviewbtns">
-        <div className="reviewreportbtn">
-          <img className="reviewreporticon" src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_report_icon.png"></img>
+      <div className={styles.reviewbtns}>
+        <div className={styles.reviewreportbtn}>
+          <img className={styles.reviewreporticon} src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_report_icon.png"></img>
           <span>Report</span>
         </div>
-        <div className="reviewhelpfulbtn" onClick={ this.toggleHelpful }>
-          <img className="reviewhelpfulicon" src={this.state.helpful ?
+        <div className={styles.reviewhelpfulbtn} onClick={ this.toggleHelpful }>
+          <img className={styles.reviewhelpfulicon} src={this.state.helpful ?
             "https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_helpful_icon_full.png" :
             "https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_helpful_icon_empty.png"}
           ></img>

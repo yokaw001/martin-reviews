@@ -4,7 +4,7 @@ import SortByDropdown from './SortByDropdown.jsx';
 import styles from '../../styles/toolbar/SortByMenu.css';
 
 const SortbyMenu = (props) => (
-  <div id="sortbymenu">
+  <div className={styles.sortbymenu}>
     <div>Sort by</div>
     <SortBySelect 
       selectedSortBy={props.selectedSortBy}

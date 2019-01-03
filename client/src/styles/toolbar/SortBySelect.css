@@ -1,4 +1,4 @@
-#sortbyselect {
+.sortbyselect {
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -12,13 +12,13 @@
   border-radius: 3px;
 }
 
-#sortbyselect:hover {
+.sortbyselect:hover {
   cursor: pointer;
   border: solid rgb(220,20,60) 2px;
   padding: 9px;
 }
 
-#sortbyarrow {
+.sortbyarrow {
   width: 20px;
   height: 20px;
 }

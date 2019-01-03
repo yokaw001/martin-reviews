@@ -1,9 +1,8 @@
-#sortbymenu {
+.sortbymenu {
   display: flex;
   flex-direction: column;
   justify-content: flex-end;
   font-size: 16px;
   font-weight: 500;
   position: relative;
-  /* border: solid black 1px; */
 }

@@ -1,4 +1,3 @@
-
 .reviewuser {
   display: flex;
   flex-direction: column;
@@ -8,7 +7,6 @@
   line-height: 1.7;
   font-weight: 500;
   margin: 5px;
-  /* border: solid black 1px; */
 }
 
 .vip {
@@ -42,7 +40,6 @@
 
 .reviewusername {
   color: #2d333f;
-  /* border: solid black 1px; */
 }
 
 .reviewusercity {

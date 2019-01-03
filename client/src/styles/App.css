@@ -1,8 +1,10 @@
-#app {
+.app {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 650px;
+  width: 45%;
+  margin-left: auto;
+  margin-right: auto;
   justify-self: center;
   font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;
 }

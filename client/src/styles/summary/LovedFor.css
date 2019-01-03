@@ -1,49 +1,46 @@
-#lovedfor {
+.lovedfor {
   display: flex;
   flex-direction: column;
   width: 100%;
   border-bottom: solid 1px #d8d9db;
-  /* border: solid black 1px; */
 }
 
-#lovedforheader {
+.lovedforheader {
   display: flex;
   align-items: center;
   font-weight: 500;
   margin-bottom: 10px;
 }
 
-#lovedforitemslist {
+.lovedforitemslist {
   display: flex;
   flex-wrap: wrap;
   width: 70%;
   max-height: 135px;
   overflow: hidden;
   margin-bottom: 10px;
-  /* border: solid black 1px; */
 }
 
-#lovedforitemslistexpanded {
+.lovedforitemslistexpanded {
   overflow: visible;
 }
 
-#bestrestaurantscontainer {
+.bestrestaurantscontainer {
   margin-bottom: 30px;
 }
 
-#bestrestaurants {
+.bestrestaurants {
   font-size: 15px;
   font-weight: 250;
   color: #da3743;
-  /* border: solid 1px black; */
 }
 
-#bestrestaurants:hover {
+.bestrestaurants:hover {
   cursor: pointer;
   text-decoration: underline;
 }
 
-#info {
+.info {
   height: 20px;
   width: 20px;
   margin-left: 5px;

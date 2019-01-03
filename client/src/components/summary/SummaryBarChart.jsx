@@ -3,7 +3,7 @@ import SummaryBarChartRow from './SummaryBarChartRow.jsx';
 import styles from '../../styles/summary/SummaryBarChart.css';
 
 const SummaryBarChart = (props) => (
-  <div id="summarybarchart">
+  <div className={styles.summarybarchart}>
     {[5, 4, 3, 2, 1].map((score, i) => (
       <SummaryBarChartRow
         score={score}

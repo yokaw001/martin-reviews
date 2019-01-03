@@ -1,12 +1,11 @@
-#summary {
+.summary {
   display: flex;
   flex-direction: column;
   align-items: stretch;
   width: 100%;
-  /* border: solid black 1px; */
 }
 
-#summaryheader {
+.summaryheader {
   display: flex;
   font-size: 23px;
   font-weight: 625;
@@ -14,13 +13,11 @@
   margin: 10px 0px 10px 0px;
   padding: 10px 0px 15px 0px;
   border-bottom: solid 1px #d8d9db;
-  /* border: solid black 1px; */
 }
 
-#summarybody {
+.summarybody {
   display: flex;
   margin: 10px 0px 10px 0px;
   padding: 0px 0px 10px 0px;
   font-size: 15px;
-  /* border: solid black 1px; */
 }

@@ -5,11 +5,11 @@ import LovedFor from './LovedFor.jsx';
 import styles from '../../styles/summary/Summary.css';
 
 const Summary = (props) => (
-  <div id="summary">
-    <div id="summaryheader">
+  <div className={styles.summary}>
+    <div className={styles.summaryheader}>
       What {props.reviewsSummary.total_reviews} People Are Saying
     </div>
-    <div id="summarybody">
+    <div className={styles.summarybody}>
       <SummaryText reviewsSummary={props.reviewsSummary} />
       <SummaryBarChart
         reviews={props.reviews}

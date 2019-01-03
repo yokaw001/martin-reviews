@@ -1,9 +1,8 @@
-#summarytext {
+.summarytext {
   width: 55%;
-  /* border: solid black 1px; */
 }
 
-#summarysubheader {
+.summarysubheader {
   font-weight: 550;
 }
 
@@ -11,14 +10,14 @@
   margin: 0px 0px 15px 0px;
 }
 
-#summaryrecentratings {
+.summaryrecentratings {
   display: flex;
   align-items: center;
   font-size: 13px;
   font-weight: 500;
 }
 
-#summaryrecentratingsstars {
+.summaryrecentratingsstars {
   margin-right: 5px;
 }
 
@@ -28,11 +27,11 @@
   margin: 2px;
 }
 
-#summaryscoreavgs {
+.summaryscoreavgs {
   display: flex;
 }
 
-#summarynoise {
+.summarynoise {
   display: flex;
   align-content: center;
   font-size: 13px;
@@ -44,9 +43,9 @@
   margin: 0px 15px 0px 0px;
 }
 
-#summarypctrecommend {
+.summarypctrecommend {
   display:flex;
   align-content: center;
   font-size: 13px;
-  /* border: solid black 1px; */
+  width: auto;
 }

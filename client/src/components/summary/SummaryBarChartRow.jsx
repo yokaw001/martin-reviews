@@ -7,15 +7,15 @@ const SummaryBarChartRow = (props) => {
   const scorePct = scoreReviewsCount / totalReviewsCount || 0;
 
   return (
-    <div className="summarybarchartrow" onClick={ () => {
+    <div className={styles.summarybarchartrow} onClick={ () => {
       if (!props.selectedFilters.includes(`${props.score} Stars`)) {
         props.addOverallScoreFilter(`${props.score} Stars`);
       }
     }}>
-      <span className="summarybarchartrownum">{props.score}</span>
-      <div className="summarybarchartbar">
-        <div className="summarybarchartbarred" style={{width: `${100*scorePct}%`}}></div>
-        <div className="summarybarchartbarwhite" style={{width: `${100*(1 - scorePct)}%`}}></div>
+      <span className={styles.summarybarchartrownum}>{props.score}</span>
+      <div className={styles.summarybarchartbar}>
+        <div className={styles.summarybarchartbarred} style={{width: `${100*scorePct}%`}}></div>
+        <div className={styles.summarybarchartbarwhite} style={{width: `${100*(1 - scorePct)}%`}}></div>
       </div>
     </div>
   );

@@ -7,8 +7,8 @@ const Filter = (props) => {
   )).length;
 
   return (
-    <div className={props.clicked ? "filter filterclicked" : "filter"} onClick={ ()=>{props.toggleFilter(props.filter)} }>
-      <img className="filtercheckbox" src={props.clicked ? 
+    <div className={props.clicked ? styles.filter + ' ' + styles.filterclicked : styles.filter} onClick={ ()=>{props.toggleFilter(props.filter)} }>
+      <img className={styles.filtercheckbox} src={props.clicked ? 
         "https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_reviews_checkbox_full.png"
         : "https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_reviews_checkbox_empty.png"}
       ></img>

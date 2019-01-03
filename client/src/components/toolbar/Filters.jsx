@@ -3,9 +3,9 @@ import Filter from './Filter.jsx';
 import styles from '../../styles/toolbar/Filters.css';
 
 const Filters = (props) => (
-  <div id="filters">
+  <div className={styles.filters}>
     Filters
-    <div id="filterslist">
+    <div className={styles.filterslist}>
       {props.reviewsFilters.map((filter, i) => (
         <Filter
           reviews={props.reviews}

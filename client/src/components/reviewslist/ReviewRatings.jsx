@@ -3,13 +3,13 @@ import DateFns from 'date-fns';
 import styles from '../../styles/reviewslist/ReviewRatings.css';
 
 const ReviewRatings = (props) => (
-  <div className="reviewratings">
-    <div className="reviewheader">
-      <div className="reviewstars">
-        <span className="reviewredstars">{`${("★ ").repeat(props.review.overall_score)}`}</span>
-        <span className="reviewgreystars">{`${("★ ").repeat(5 - props.review.overall_score)}`}</span>
+  <div className={styles.reviewratings}>
+    <div className={styles.reviewheader}>
+      <div className={styles.reviewstars}>
+        <span className={styles.reviewredstars}>{`${("★ ").repeat(props.review.overall_score)}`}</span>
+        <span className={styles.reviewgreystars}>{`${("★ ").repeat(5 - props.review.overall_score)}`}</span>
       </div>
-      <div className="reviewdinedondate">
+      <div className={styles.reviewdinedondate}>
         <span>{
           (() => {
             let currDate = new Date();
@@ -23,11 +23,11 @@ const ReviewRatings = (props) => (
         }</span>
       </div>
     </div>
-    <div className="reviewscores">
-      <span className="reviewscore">{`Overall  ${props.review.overall_score} · `}</span>
-      <span className="reviewscore">{`Food  ${props.review.food_score} · `}</span>
-      <span className="reviewscore">{`Service  ${props.review.service_score} · `}</span>
-      <span className="reviewscore">{`Ambience  ${props.review.ambience_score}`}</span>
+    <div className={styles.reviewscores}>
+      <span className={styles.reviewscore}>{`Overall  ${props.review.overall_score} · `}</span>
+      <span className={styles.reviewscore}>{`Food  ${props.review.food_score} · `}</span>
+      <span className={styles.reviewscore}>{`Service  ${props.review.service_score} · `}</span>
+      <span className={styles.reviewscore}>{`Ambience  ${props.review.ambience_score}`}</span>
     </div>
   </div>
 );

@@ -3,7 +3,7 @@ import Review from './Review.jsx';
 import styles from '../../styles/reviewslist/ReviewsList.css';
 
 const ReviewsList = (props) => (
-  <div id="reviewslist">
+  <div className={styles.reviewslist}>
     {props.selectedReviews()
       .filter((review, i) => {
         const minIndex = (props.currentReviewsPage - 1) * props.reviewsPerPage;
