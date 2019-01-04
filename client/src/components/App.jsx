@@ -1,6 +1,5 @@
 import React, { Component } from 'react';
 import Axios from 'axios';
-// import Logo from './Logo.jsx';
 import Summary from './summary/Summary.jsx';
 import Toolbar from './toolbar/Toolbar.jsx';
 import ReviewsList from './reviewslist/ReviewsList.jsx';
@@ -31,7 +30,7 @@ class App extends Component {
   };
 
   getAllReviews = () => {
-    return Axios.get(`http://127.0.0.1:9001/api/reviews/all/${this.state.restaurantId}`) // change to include port #
+    return Axios.get(`http://127.0.0.1:9001/api/reviews/all/${this.state.restaurantId}`)
       .then(({data}) => {
         this.setState({ reviews: data });
       });
@@ -62,9 +61,7 @@ class App extends Component {
     let selectedReviews = this.selectedReviews();
     const totalPages = Math.ceil(selectedReviews.length / this.state.reviewsPerPage);
     const newPageNumber = Math.max(Math.min(pageNumber, totalPages), 1); // set max = totalPages, min = 1
-    this.setState({ currentReviewsPage: newPageNumber }, () => {
-      window.scrollTo(0, 750);
-    });
+    this.setState({ currentReviewsPage: newPageNumber });
   };
 
   updateSelectedSortBy = (sortby) => {
@@ -101,9 +98,7 @@ class App extends Component {
       }  
     }
 
-    this.setState({ selectedFilters, reviewsSummary, currentReviewsPage: 1 }, () => {
-      window.scrollTo(0, 750);
-    });
+    this.setState({ selectedFilters, reviewsSummary, currentReviewsPage: 1 });
   };
 
   addOverallScoreFilter = (filter) => {
@@ -116,9 +111,7 @@ class App extends Component {
     reviewsSummary.reviewsFilters.unshift(filter);
     selectedFilters.unshift(filter);
 
-    this.setState({ reviewsSummary, selectedFilters, currentReviewsPage: 1 }, () => {
-      window.scrollTo(0, 500);
-    });
+    this.setState({ reviewsSummary, selectedFilters, currentReviewsPage: 1 });
   }
 
   toggleSortDropdown = () => {
@@ -127,7 +120,6 @@ class App extends Component {
 
   render = () => (
     <div className={styles.app}>
-      {/* <Logo/> */}
       <Summary
         reviews={this.state.reviews}
         reviewsSummary={this.state.reviewsSummary}
