@@ -991,7 +991,7 @@ eval("\n\nvar bind = __webpack_require__(/*! ./helpers/bind */ \"./node_modules/
 /*! no static exports found */
 /***/ (function(module, exports, __webpack_require__) {
 
-eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".App__app__3qgII {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  width: 650px;\\n  margin-left: auto;\\n  margin-right: auto;\\n  justify-self: center;\\n  font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;\\n}\", \"\"]);\n\n// Exports\nexports.locals = {\n\t\"app\": \"App__app__3qgII\"\n};\n\n//# sourceURL=webpack:///./client/src/styles/App.css?./node_modules/css-loader/dist/cjs.js??ref--6");
+eval("exports = module.exports = __webpack_require__(/*! ../../../node_modules/css-loader/dist/runtime/api.js */ \"./node_modules/css-loader/dist/runtime/api.js\")(false);\n// Module\nexports.push([module.i, \".App__app__3qgII {\\n  display: flex;\\n  flex-direction: column;\\n  align-items: center;\\n  width: auto;\\n  margin-left: auto;\\n  margin-right: auto;\\n  padding: 0px 10px 0px 10px;\\n  justify-self: center;\\n  font-family: BrandonText,-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Helvetica,Arial,sans-serif,Apple Color Emoji,Segoe UI Emoji,Segoe UI Symbol;\\n}\", \"\"]);\n\n// Exports\nexports.locals = {\n\t\"app\": \"App__app__3qgII\"\n};\n\n//# sourceURL=webpack:///./client/src/styles/App.css?./node_modules/css-loader/dist/cjs.js??ref--6");
 
 /***/ }),
 
