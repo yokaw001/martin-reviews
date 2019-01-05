@@ -30,14 +30,14 @@ class App extends Component {
   };
 
   getAllReviews = () => {
-    return Axios.get(`http://127.0.0.1:9001/api/reviews/all/${this.state.restaurantId}`)
+    return Axios.get(`/api/reviews/all/${this.state.restaurantId}`)
       .then(({data}) => {
         this.setState({ reviews: data });
       });
   };
 
   getReviewsSummary = () => {
-    return Axios.get(`http://127.0.0.1:9001/api/reviews/summary/${this.state.restaurantId}`)
+    return Axios.get(`/api/reviews/summary/${this.state.restaurantId}`)
       .then(({data}) => {
         this.setState({ reviewsSummary: data });
       });
@@ -60,7 +60,7 @@ class App extends Component {
   updateReviewsPage = (pageNumber) => {
     let selectedReviews = this.selectedReviews();
     const totalPages = Math.ceil(selectedReviews.length / this.state.reviewsPerPage);
-    const newPageNumber = Math.max(Math.min(pageNumber, totalPages), 1); // set max = totalPages, min = 1
+    const newPageNumber = Math.max(Math.min(pageNumber, totalPages), 1);
     this.setState({ currentReviewsPage: newPageNumber });
   };
 
@@ -105,7 +105,7 @@ class App extends Component {
     let reviewsSummary = {...this.state.reviewsSummary};
     let selectedFilters = [...this.state.selectedFilters];
 
-    reviewsSummary.reviewsFilters = reviewsSummary.reviewsFilters.filter(f => f.slice(1, 6) !== ' Star'); // remove pre-existing score filters
+    reviewsSummary.reviewsFilters = reviewsSummary.reviewsFilters.filter(f => f.slice(1, 6) !== ' Star');
     selectedFilters = selectedFilters.filter(f => f.slice(1, 6) !== ' Star');
 
     reviewsSummary.reviewsFilters.unshift(filter);
