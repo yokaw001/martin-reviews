@@ -9,18 +9,28 @@
   margin: 5px;
 }
 
+.userinitialscontainer {
+  position:relative;
+  min-height: 65px;
+  max-height: 65px;
+  min-width: 65px;
+  max-width: 65px;
+  justify-content: center;
+  align-items: center;
+}
+
 .vip {
   display: flex;
   align-items: center;
   justify-content: center;
   font-size: 11px;
-  font-weight: 500;
+  font-weight: lighter;
   height: 20px;
   width: 30px;
   color: white;
   background-color: #fdaf08;
   position: absolute;
-  left: 20px;
+  left: -10px;
   top: 5px;
   border-radius: 1rem;
 }
@@ -30,8 +40,11 @@
   align-items: center;
   justify-content: center;
   font-size: 18px;
-  height: 25px;
-  width: 25px;
+  font-weight: lighter;
+  min-height: 45px;
+  max-height: 45px;
+  min-width: 45px;
+  max-width: 45px;
   color: white;
   padding: 10px;
   margin: 10px;

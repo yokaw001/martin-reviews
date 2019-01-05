@@ -8,9 +8,11 @@ const ReviewUser = (props) => {
 
   return (
     <div className={styles.reviewuser}>
-      {randomDigit < 3 ? <div className="vip"><span>VIP</span></div> : null}
-      <div style={{'backgroundColor':randomColor}} className={styles.reviewuserinitials}>
-        <span>{props.userInitials}</span>
+      <div className={styles.userinitialscontainer}>
+        {randomDigit < 3 ? <div className={styles.vip}><span>VIP</span></div> : null}
+        <div style={{'backgroundColor':randomColor}} className={styles.reviewuserinitials}>
+          <span>{props.userInitials}</span>
+        </div>
       </div>
       <div className={styles.reviewusername}>{props.username}</div>
       <div className={styles.reviewusercity}>{props.userCity}</div>
