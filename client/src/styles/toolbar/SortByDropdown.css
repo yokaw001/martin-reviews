@@ -32,9 +32,9 @@
 }
 
 .dropdowncirclefull {
-  height: 8px;
-  width: 8px;
+  height: 18px;
+  width: 18px;
   border-radius: 50%;
-  border: solid rgb(220,20,60) 7px;
+  border: solid rgb(220,20,60) 6px;
   margin-right: 6px;
 }

@@ -12,6 +12,11 @@
   margin: 6px 13px 6px 0px;
 }
 
+.lovedforitemcontents {
+  display: flex;
+  height: 45px;
+}
+
 .lovedforicon {
   height: 20px;
   width: 20px;

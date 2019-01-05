@@ -1,3 +1,9 @@
+.pagenumberbuttoncontainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .pagenumberbutton {
   display: flex;
   align-items: center;
@@ -13,5 +19,4 @@
 .pagenumberbutton:hover, .currentpagenumberbutton {
   cursor: pointer;
   border: solid rgb(220,20,60) 2px;
-  margin: -1px 9px -1px 9px;
 }

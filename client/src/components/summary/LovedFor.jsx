@@ -41,7 +41,9 @@ class LovedFor extends Component {
         ))}
       </div>
       <div className={styles.bestrestaurantscontainer + ' ' + styles.reviewssummarytextitem}>
-        <span className={styles.bestrestaurants}>Best Restaurants in Downtown ›</span>
+        <div>
+          <span className={styles.bestrestaurants}>Best Restaurants in Downtown ›</span>
+        </div>
       </div>
     </div>
   );
