@@ -100,7 +100,7 @@ CREATE TABLE reviews_detail (
 );\n
 `;
 
-const foods = ['noodles', 'appetizers', 'happy hour items', 'burgers', 'burritos', 'nachos', 'tacos', 'sandwiches', 'garlic fries', 'carne asada fries', 'soups', 'pepperoni pizzas', 'cheeseburgers', 'kale salads', 'quinoa salads', 'potato salads', 'strawberry smoothies', 'milkshakes', 'fried chicken wings', 'roast chicken', 'shawarmas', 'curry', 'garlic naan', 'wings'];
+const foods = ['chicken tacos', 'beef tacos', 'cheeseburgers', 'hamburgers', 'buffalo burgers', 'carne asada burritos', 'chicken burritos', 'beef burritos', 'burritos', 'monster nachos', 'appetizers', 'cuban sandwiches', 'tri tip sandwiches', 'sandwiches', 'carne asada fries', 'soups', 'pepperoni pizzas', 'kale salads', 'quinoa salads', 'strawberry smoothies', 'milkshakes', 'fried chicken wings', 'roast chicken', 'shawarmas'];
 const adverbs = ['pretty', 'honestly', 'frankly', 'ridiculously', 'ludicrously', 'soooo', 'frking', 'effing', 'like insanely', '...', 'unbelievably', 'undeniably', 'just plain'];
 const intros = ['Came here a while ago, and', 'We came here for dinner one night and', 'Stopped by for a bite...', 'Came here for my last birthday, and', 'Grabbed lunch here a while ago, and', 'Came on a weekday and'];
 const posAdjectives = ['awesome', 'lit', 'delicious', 'good', 'great', 'amazing', 'life-affirming', 'life-changing', 'unstoppable', 'un-freaking-believable', 'underrated'];
