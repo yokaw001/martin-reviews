@@ -149,7 +149,7 @@ const getComment = (type) => {
 const getRandomDate = () => {
   const start = new Date(2016, 0, 1);
   const now = new Date();
-  return new Date(start.getTime() + Math.random() * (now.getTime() - start.getTime()))
+  return new Date(start.getTime() + Math.random() * (now.getTime() - start.getTime()));
 };
 
 const getInsertForReviewsDetail = () => {
