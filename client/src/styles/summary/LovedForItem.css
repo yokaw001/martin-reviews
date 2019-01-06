@@ -1,7 +1,9 @@
 .lovedforitem {
   display: flex;
   justify-content: space-between;
-  height: 50px;
+  align-items: center;
+  min-height: 50px;
+  max-height: 50px;
   border: solid 1px #d8d9db;
   margin: 7px 14px 7px 1px;
 }
@@ -9,12 +11,13 @@
 .lovedforitem:hover {
   cursor: pointer;
   border: solid rgb(220,20,60) 2px;
-  margin: 6px 13px 6px 0px;
+  margin: 7px 13px 7px 0px;
 }
 
 .lovedforitemcontents {
   display: flex;
   height: 45px;
+  padding: 2px;
 }
 
 .lovedforicon {

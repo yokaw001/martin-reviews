@@ -2,7 +2,7 @@ const helpers = {
   getLovedForItemsList: () => {
     const items = ['Best Service', 'Notable Wine List', 'Special Occasion', 'Best Value', 'Best Sushi', 'Best Casual'];
     const cities = ['Downtown / South and East LA', 'Los Angeles', 'Torrance', 'East LA', 'West LA', 'South Bay'];
-    const count = Math.floor(Math.random() * items.length) + 1;
+    const count = Math.floor(Math.random() * 4) + 1;
     const lovedForItems = [];
 
     for (let i = 0; i < count; i += 1) {

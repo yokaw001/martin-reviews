@@ -8,29 +8,29 @@ class LovedFor extends Component {
     super(props);
     const lovedForItems = helpers.getLovedForItemsList();
     this.state = {
-      overflow: false,
-      expanded: false,
+      // overflow: false,
+      // expanded: false,
       lovedForItems,
     };
   };
 
-  componentDidMount = () => {
-    const overflow = this.hasOverflow();
-    if (overflow !== this.state.overflow) { this.setState({ overflow }); }
-  };
+  // componentDidMount = () => {
+  //   const overflow = this.hasOverflow();
+  //   if (overflow !== this.state.overflow) { this.setState({ overflow }); }
+  // };
 
-  componentDidUpdate = () => {
-    const overflow = this.hasOverflow();
-    if (overflow !== this.state.overflow) { this.setState({ overflow }); }
-  };
+  // componentDidUpdate = () => {
+  //   const overflow = this.hasOverflow();
+  //   if (overflow !== this.state.overflow) { this.setState({ overflow }); }
+  // };
 
-  hasOverflow = () => {
-    const element = document.getElementsByClassName(styles.lovedforitemslist);
-    return element.scrollHeight > element.clientHeight;
-  };
+  // hasOverflow = () => {
+  //   const element = document.getElementsByClassName(styles.lovedforitemslist);
+  //   return element.scrollHeight > element.clientHeight;
+  // };
 
   render = () => (
-    <div className={styles.lovedfor} className={styles.reviewssummarytextitem}>
+    <div className={styles.lovedfor + ' ' + styles.reviewssummarytextitem}>
       <div className={styles.lovedforheader}>
         Loved For
         <img className={styles.info} src="https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/tableit_reviews_summary_info_icon.png"></img>
