@@ -34,7 +34,6 @@ class Review extends Component {
   };
 
   toggleExpanded = () => {
-    console.log('toggleExpanded');
     this.setState({ expanded: !this.state.expanded });
   };
 
