@@ -53,7 +53,7 @@ const getInsertForUsers = (username) => {
   const city = getRandomElement(cities);
 
   return `INSERT INTO users (username, user_initials, user_city) VALUES ("${username}", "${initial}", "${city}");`;
-}
+};
 
 for (let i = 0; i < usernames.length; i += 1) {
   const username = usernames[i];
