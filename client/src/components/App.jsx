@@ -61,7 +61,9 @@ class App extends Component {
     let selectedReviews = this.selectedReviews();
     const totalPages = Math.ceil(selectedReviews.length / this.state.reviewsPerPage);
     const newPageNumber = Math.max(Math.min(pageNumber, totalPages), 1);
-    this.setState({ currentReviewsPage: newPageNumber });
+    this.setState({ currentReviewsPage: newPageNumber }, () => {
+      window.scrollTo(0, 3000);
+    });
   };
 
   updateSelectedSortBy = (sortby) => {
@@ -111,7 +113,9 @@ class App extends Component {
     reviewsSummary.reviewsFilters.unshift(filter);
     selectedFilters.unshift(filter);
 
-    this.setState({ reviewsSummary, selectedFilters, currentReviewsPage: 1 });
+    this.setState({ reviewsSummary, selectedFilters, currentReviewsPage: 1 }, () => {
+      window.scrollTo(0, 3000);
+    });
   }
 
   toggleSortDropdown = () => {

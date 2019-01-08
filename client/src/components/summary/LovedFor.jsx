@@ -8,26 +8,9 @@ class LovedFor extends Component {
     super(props);
     const lovedForItems = helpers.getLovedForItemsList();
     this.state = {
-      // overflow: false,
-      // expanded: false,
       lovedForItems,
     };
   };
-
-  // componentDidMount = () => {
-  //   const overflow = this.hasOverflow();
-  //   if (overflow !== this.state.overflow) { this.setState({ overflow }); }
-  // };
-
-  // componentDidUpdate = () => {
-  //   const overflow = this.hasOverflow();
-  //   if (overflow !== this.state.overflow) { this.setState({ overflow }); }
-  // };
-
-  // hasOverflow = () => {
-  //   const element = document.getElementsByClassName(styles.lovedforitemslist);
-  //   return element.scrollHeight > element.clientHeight;
-  // };
 
   render = () => (
     <div className={styles.lovedfor + ' ' + styles.reviewssummarytextitem}>
