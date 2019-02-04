@@ -25,22 +25,21 @@ class App extends Component {
     const restaurantId = Math.floor(Math.random() * 10) + 1;
     this.setState({ restaurantId }, () => {
       this.getAllReviews()
-      .then(this.getReviewsSummary);
+        .then(this.getReviewsSummary)
+        .catch((err) => { console.error(err); });
     });
   };
 
   getAllReviews = () => {
-    return Axios.get(`http://3.83.40.199:9000/api/reviews/all/${this.state.restaurantId}`)
-      .then(({data}) => {
-        this.setState({ reviews: data });
-      });
+    return Axios.get(`http://3.84.195.96:9000/api/reviews/all/${this.state.restaurantId}`)
+      .then(({data}) => { this.setState({ reviews: data }); })
+      .catch((err) => { console.error(err); });
   };
 
   getReviewsSummary = () => {
-    return Axios.get(`http://3.83.40.199:9000/api/reviews/summary/${this.state.restaurantId}`)
-      .then(({data}) => {
-        this.setState({ reviewsSummary: data });
-      });
+    return Axios.get(`http://3.84.195.96:9000/api/reviews/summary/${this.state.restaurantId}`)
+      .then(({data}) => { this.setState({ reviewsSummary: data }); })
+      .catch((err) => { console.error(err); });
   };
   
   selectedReviews = () => {
