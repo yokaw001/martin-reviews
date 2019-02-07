@@ -1,5 +1,6 @@
 module.exports = {
-  host: 'localhost',
+  host: '3.84.195.96',
+  port: 3306,
   user: 'root',
   password: 'password',
   database: 'tableit_reviews',
