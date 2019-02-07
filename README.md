@@ -1,7 +1,11 @@
 # Description
-Restaurant reviews component for OpenTable product page
+This is my microservice for a project that I worked on in a team of four engineers. THe overall application is a replica of OpenTable's product page, and my role in particular (this repo) was to rebuild the restaurant reviews sections of their web page.
 
-This is my microservice for a project that I worked on in a team of four engineers. THe overall application is a replica of OpenTable's product page, and my role in particular was to rebuild the restaurant reviews sections of their web page. I've included links to gifs here to showcase both our overall end product and the features I built for my specific microservice (gif sizes exceeded the limit to embed directly).
+# GIFs
+I've listed links to gifs below to showcase both our overall end product and the features I built for my specific microservice (gif sizes exceeded the limit to embed directly).
 
-First, and overview of our final product: https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/gifs/tableit_overview.gif
-
+- Overview of our final product: https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/gifs/tableit_overview.gif
+- Sort reviews from dropdown: https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/gifs/tableit_reviews_sort.gif
+- Filter reviews from the graph: https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/gifs/tableit_reviews_graph_filters.gif
+- Filter reviews by common keyword: https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/gifs/tableit_reviews_filters.gif
+- Reviews pagination: https://s3-us-west-1.amazonaws.com/gitbuckets/hrla26-fec-tableit/gifs/tableit_reviews_pagination.gif
