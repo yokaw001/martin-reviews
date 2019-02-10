@@ -1,5 +1,5 @@
 # Description
-This is my microservice for a project that I worked on in a team of four engineers at Hack Reactor. The overall application is a replica of OpenTable's product page, and my role in particular (this repo) was to rebuild the restaurant reviews sections of their web page.
+This is my microservice for a project that I worked on in a team of four engineers at Hack Reactor. The overall application is a replica of OpenTable's product page, and my role in particular was to rebuild the restaurant reviews sections of their web page.
 
 # GIFs
 I've listed links to GIFs below showing both our overall end product and some features I built for my specific microservice.
